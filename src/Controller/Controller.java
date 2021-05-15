@@ -1,4 +1,4 @@
-package sample;
+package Controller;
 
 import Data.DataHelper;
 import Data.LogInClass;
