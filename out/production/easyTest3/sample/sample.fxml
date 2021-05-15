@@ -3,18 +3,43 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #1a237e; -fx-background-radius: 30;">
          <children>
-            <Button fx:id="idLogIn" layoutX="73.0" layoutY="141.0" mnemonicParsing="false" text="Button" />
-            <PasswordField fx:id="idPass" layoutX="20.0" layoutY="107.0" />
-            <TextField fx:id="idUser" layoutX="20.0" layoutY="75.0" />
+            <Pane layoutX="163.0" layoutY="132.0" prefHeight="246.0" prefWidth="193.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+               <children>
+                  <TextField fx:id="idUser" alignment="CENTER" layoutX="24.0" layoutY="76.0" prefHeight="25.0" prefWidth="146.0" promptText="User" style="-fx-background-radius: 40; -fx-background-color: #3f51b5 #3f51b5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="idPass" alignment="CENTER" layoutX="24.0" layoutY="123.0" prefHeight="25.0" prefWidth="146.0" promptText="Pass" style="-fx-background-color: #3f51b5; -fx-background-radius: 40;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </PasswordField>
+                  <Button fx:id="idLogIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="Log In!" textAlignment="CENTER" textFill="#f8f8f8">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>
