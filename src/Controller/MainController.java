@@ -5,19 +5,34 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import Model.DataTestObject;
+import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class MainController {
+public class MainController  {
 
     int selectedProduct;
+    String producto;
     int selectedPlateOption=-1;
+    String path;
+    private ObservableList<DataTestObject> dt1= FXCollections.observableArrayList();
+
+    public MainController(){
+        dt1.add(new DataTestObject());
+    }
+
+
+    public ObservableList<DataTestObject> getDataTestObject(){
+        return dt1;
+    }
 
     @FXML
     private ResourceBundle resources;
@@ -31,6 +46,9 @@ public class MainController {
     @FXML
     private ComboBox<String> idPlate;
 
+    @FXML
+    private Button idContinuar1;
+
 
     @FXML
     void initialize() {
@@ -41,14 +59,22 @@ public class MainController {
         idProduct.setOnAction(actionEvent -> {
             selectedProduct= idProduct.getSelectionModel().getSelectedIndex();
             System.out.println(selectedProduct);
-            System.out.println(selectedPlateOption);
+            initProductComboBox();
+            dt1.get(0).setProducto(idProduct.getSelectionModel().getSelectedItem());
+
             choosePath();
         });
 
         idPlate.setOnAction(actionEvent -> {
             selectedPlateOption= idPlate.getSelectionModel().getSelectedIndex();
             System.out.println(selectedPlateOption);
+            if(selectedProduct==0)  dt1.get(0).setMatricula(false);
+            else if(selectedProduct==1) dt1.get(0).setMatricula(true);
             choosePath();
+        });
+
+        idContinuar1.setOnAction(actionEvent -> {
+            changeScene();
         });
 
     }
@@ -63,37 +89,41 @@ public class MainController {
         ObservableList<String> plate= FXCollections.observableArrayList();
         plate.addAll("No conozco la matrícula","Conozco la mátricula");
         idPlate.setItems(plate);
+
     }
 
     public void choosePath(){
         if(selectedPlateOption==-1) System.out.println("Elige matricula");
-        else if(selectedPlateOption==1) choosePathKnowPlate();
-        else if(selectedProduct==0) choosePathMoto();
-        else if(selectedProduct==1) choosePathCoche();
+        else if(selectedPlateOption==1) {
+            System.out.println("camino  conozco matricula");
+        }
+        else if(selectedProduct==0) {
+            System.out.println("camino moto");
+            path="../View/motoUnknownPlate.fxml";
+        }
+        else if(selectedProduct==1) {
+            System.out.println("camino coche");
+        }
         else System.out.println("Error, no se ha seleccionado ningún producto");
     }
 
-    public void choosePathMoto(){
-        System.out.println("Moto matricula desconocida");
-        idPlate.getScene().getWindow().hide();
+    public void changeScene(){
+
+        idContinuar1.getScene().getWindow().hide();
         Stage mainWindows= new Stage();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../View/motoUnknownPlate.fxml"));
+            root = FXMLLoader.load(getClass().getResource(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
         mainWindows.setTitle("easyTest");
         mainWindows.setScene(new Scene(root, 500,500));
         mainWindows.show();
+
+        new MotoUnknownPlate().setMainController(this);
+
     }
 
-    public void choosePathCoche(){
-        System.out.println("Coche");
-    }
-
-    public void choosePathKnowPlate(){
-        System.out.println("Conozco la matrícula");
-    }
 }
 
