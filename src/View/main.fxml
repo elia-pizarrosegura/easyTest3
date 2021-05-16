@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <Pane layoutX="163.0" layoutY="42.0" prefHeight="77.0" prefWidth="404.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+         <children>
+            <ComboBox fx:id="idProduct" layoutX="28.0" layoutY="26.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Label layoutX="60.0" layoutY="72.0" prefHeight="17.0" prefWidth="58.0" text="Producto" textFill="#fdfbfb" />
+      <Label layoutX="60.0" layoutY="119.0" prefHeight="17.0" prefWidth="64.0" text="Matricula" textFill="#fdfbfb" />
+      <ComboBox fx:id="idPlate" layoutX="192.0" layoutY="115.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
