@@ -13,8 +13,10 @@ import java.time.Month;
 import java.util.ResourceBundle;
 
 public class MotoUnknownPlate {
-    private MainController mainController;
-    protected ObservableList<DataTestObject> dt1= FXCollections.observableArrayList();
+    private MainController mainControllerr;
+    protected ObservableList<DataTestObject> dt1;
+    String producto;
+    Boolean matricula;
 
     public MotoUnknownPlate() {
 
@@ -44,12 +46,14 @@ public class MotoUnknownPlate {
     @FXML
     void initialize() {
 
+
        initMarca();
         setFechaMatriculacionObject();
 
         idMarca.setOnAction(actionEvent -> {
             String m= setMarcaObject();
-            dt1.get(0).setMarca(m);
+           // System.out.println(dt1.stream().count());
+           // dt1.get(0).setMarca(m);
         });/*
 
         idFechaMatriculac.setOnAction(actionEvent -> {
@@ -81,9 +85,12 @@ public class MotoUnknownPlate {
         //dt1.get(0).setModelo(marca);
     }
 
-    public ObservableList<DataTestObject> setMainController(MainController mainController){
-        this.mainController= mainController;
-        dt1= mainController.getDataTestObject();
-        return dt1;
+    public void setMainController(MainController mainController){
+        this.mainControllerr= mainController;
+        dt1= mainControllerr.getDataTestObject();
+        System.out.println("nimero"+dt1.stream().count());
+        producto= mainController.getDataTestObject().get(0).getProducto();
+        System.out.println(producto);
+
     }
 }
