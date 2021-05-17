@@ -3,8 +3,10 @@ package Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import DataBase.DatabaseHandler;
 import Model.DataTestObject;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -26,6 +28,7 @@ public class MainController  {
     private ObservableList<DataTestObject> dt1= FXCollections.observableArrayList();
 
     public MainController(){
+
         dt1.add(new DataTestObject());
     }
 
@@ -44,7 +47,7 @@ public class MainController  {
     private ComboBox<String> idProduct;
 
     @FXML
-    private ComboBox<String> idPlate;
+    private ComboBox<String> idMatricula;
 
     @FXML
     private Button idContinuar1;
@@ -65,8 +68,8 @@ public class MainController  {
             choosePath();
         });
 
-        idPlate.setOnAction(actionEvent -> {
-            selectedPlateOption= idPlate.getSelectionModel().getSelectedIndex();
+        idMatricula.setOnAction(actionEvent -> {
+            selectedPlateOption= idMatricula.getSelectionModel().getSelectedIndex();
             System.out.println(selectedPlateOption);
             if(selectedProduct==0)  dt1.get(0).setMatricula(false);
             else if(selectedProduct==1) dt1.get(0).setMatricula(true);
@@ -88,7 +91,7 @@ public class MainController  {
     public void initMatriculaType(){
         ObservableList<String> plate= FXCollections.observableArrayList();
         plate.addAll("No conozco la matrícula","Conozco la mátricula");
-        idPlate.setItems(plate);
+        idMatricula.setItems(plate);
 
     }
 

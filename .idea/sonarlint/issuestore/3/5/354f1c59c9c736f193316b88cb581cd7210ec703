@@ -1,0 +1,13 @@
+
+U	java:S106="9Replace this use of System.out or System.err by a logger.(¥µ¬Š8ØÖ¬¯—/
+Z	java:S106`"9Replace this use of System.out or System.err by a logger.(¤ü÷€şÿÿÿÿ8ƒÓ°—/
+Z	java:S106b"9Replace this use of System.out or System.err by a logger.(ğİøıÿÿÿÿ8¾°‰´—/
+U	java:S106e"9Replace this use of System.out or System.err by a logger.(î§ë’8¨ŒŠ´—/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+W
+java:S1128	";Remove this unused import 'javafx.application.Application'.(í™şj8¼–­¹—/
+T	java:S106F"9Replace this use of System.out or System.err by a logger.(˜­±/8ğâÛ¯—/
+H
+java:S1602L",Remove useless curly braces around statement(—ºè8Àü“´—/
+U	java:S106i"9Replace this use of System.out or System.err by a logger.(ó†À¤8µŸ‹´—/
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(üçç8êÀÎ°—/

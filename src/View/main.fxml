@@ -8,14 +8,14 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
    <children>
-      <Pane layoutX="163.0" layoutY="42.0" prefHeight="77.0" prefWidth="404.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+      <Pane layoutX="105.0" layoutY="114.0" prefHeight="172.0" prefWidth="406.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
          <children>
-            <ComboBox fx:id="idProduct" layoutX="28.0" layoutY="26.0" prefWidth="150.0" />
+            <ComboBox fx:id="idProduct" layoutX="220.0" layoutY="32.0" prefWidth="150.0" />
+            <Button fx:id="idContinuar1" layoutX="168.0" layoutY="132.0" mnemonicParsing="false" text="Continuar" />
+            <Label layoutX="87.0" layoutY="91.0" prefHeight="17.0" prefWidth="64.0" text="Matricula" textFill="#fdfbfb" />
+            <Label layoutX="93.0" layoutY="32.0" prefHeight="26.0" prefWidth="58.0" text="Producto" textFill="#fdfbfb" />
+            <ComboBox fx:id="idMatricula" layoutX="220.0" layoutY="87.0" prefWidth="150.0" />
          </children>
       </Pane>
-      <Label layoutX="60.0" layoutY="72.0" prefHeight="17.0" prefWidth="58.0" text="Producto" textFill="#fdfbfb" />
-      <Label layoutX="60.0" layoutY="119.0" prefHeight="17.0" prefWidth="64.0" text="Matricula" textFill="#fdfbfb" />
-      <ComboBox fx:id="idPlate" layoutX="192.0" layoutY="115.0" prefWidth="150.0" />
-      <Button fx:id="idContinuar1" layoutX="240.0" layoutY="175.0" mnemonicParsing="false" text="Continuar" />
    </children>
 </AnchorPane>

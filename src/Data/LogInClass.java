@@ -12,6 +12,10 @@ public class LogInClass implements Serializable {
         this.pass = pass;
     }
 
+    public LogInClass(){
+
+    }
+
     public String getUser() {
         return user;
     }

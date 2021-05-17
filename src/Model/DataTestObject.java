@@ -9,6 +9,11 @@ public class DataTestObject {
     public LocalDate fechaMatriculacion;
     public String marca;
     public String cilindrada;
+    public String modelo;
+    public String version;
+
+    public DataTestObject(){
+    }
 
     public DataTestObject(String producto, boolean matricula, LocalDate fechaMatriculacion, String marca, String cilindrada, String modelo, String version) {
         this.producto = producto;
@@ -20,8 +25,6 @@ public class DataTestObject {
         this.version = version;
     }
 
-    public String modelo;
-    public String version;
 
     public String getMarca() {
         return marca;
@@ -55,9 +58,6 @@ public class DataTestObject {
         this.version = version;
     }
 
-    public DataTestObject(){
-
-    }
 
     public String getProducto() {
         return producto;
@@ -82,4 +82,6 @@ public class DataTestObject {
     public void setFechaMatriculacion(LocalDate fechaMatriculacion) {
         this.fechaMatriculacion = fechaMatriculacion;
     }
+
+
 }

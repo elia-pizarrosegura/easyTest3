@@ -2,6 +2,7 @@ package Controller;
 
 import Data.DataHelper;
 import Data.LogInClass;
+import DataBase.DatabaseHandler;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class logInController {
 
@@ -26,11 +28,33 @@ public class logInController {
     @FXML
     private TextField idUser;
 
-    private void logIn() throws IOException {
+    @FXML
+    void initialize() {
+
+        idLogIn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    logIn();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+    }
+
+    private void logIn() throws IOException, SQLException, ClassNotFoundException {
         System.out.println("log in press");
-        LogInClass user2= (LogInClass) new DataHelper().deSerializeFromFileToObject("logIn");
-        System.out.println(user2.getUser()+" "+user2.getPass());
-        if(!idUser.getText().equals(user2.getUser()) && !idPass.getText().equals(user2.getPass())){
+
+        DatabaseHandler databaseHandler= new DatabaseHandler();
+        LogInClass userDDBB=databaseHandler.getLogInData(idUser.getText());
+
+        if(!idUser.getText().trim().equals(userDDBB.getUser().trim()) && !idPass.getText().trim().equals(userDDBB.getPass().trim())){
             if (idUser.getText().isEmpty() || idPass.getText().isEmpty()) {
                 System.out.println("User or pass is not filled.");
             }else{
@@ -48,20 +72,5 @@ public class logInController {
             mainWindows.show();
 
         }
-    }
-
-    @FXML
-    void initialize() {
-        idLogIn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    logIn();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
     }
 }
