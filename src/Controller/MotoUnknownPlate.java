@@ -1,6 +1,10 @@
 package Controller;
 
+import Data.LogInClass;
+import DataBase.DatabaseHandler;
 import Model.DataTestObject;
+import javafx.beans.binding.Binding;
+import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,8 +12,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MotoUnknownPlate {
@@ -45,15 +51,11 @@ public class MotoUnknownPlate {
     private DatePicker idFechaMatriculac;
 
     @FXML
-    void initialize() {
+    void initialize() throws SQLException, ClassNotFoundException {
 
 
         initMarca();
         setFechaMatriculacionObject();
-
-        idMarca.setOnAction(actionEvent -> {
-            setMarcaObject();
-        });
 
         idFechaMatriculac.setOnAction(actionEvent -> {
             LocalDate date = idFechaMatriculac.getValue();
@@ -61,36 +63,34 @@ public class MotoUnknownPlate {
             System.out.println("La fecha de matriculación seleccionada es: " + date);
         });
 
+        idMarca.setOnAction(actionEvent -> {
+            setMarcaObject();
+
+        });
+
+        idCilindrada.setOnAction(actionEvent -> {
+
+        });
 
     }
 
-    public void initMarca() {
+    public void initMarca() throws SQLException, ClassNotFoundException {
         ObservableList<String> marcaList = FXCollections.observableArrayList();
-        marcaList.addAll("Aprilia", "BMW", "Derbi");
+        marcaList.addAll("APRILIA", "BMW", "DERBI");
         idMarca.setItems(marcaList);
+        Bindings.bindContentBidirectional(marcaList,getCilindradaList());
     }
 
-    public void initCilindrada() {
-        ObservableList<String> marcaList = FXCollections.observableArrayList();
-        marcaList.addAll("Eléctrica", "1-50", "51 a 125");
-        idMarca.setItems(marcaList);
+    public ObservableList<String> getCilindradaList() throws SQLException, ClassNotFoundException {
+
+        ObservableList<String> cilindradasTipos= (ObservableList<String>) new DatabaseHandler().getCilindradaList(dt1.get(0).getMarca());
+        idMarca.setItems(cilindradasTipos);
+        return cilindradasTipos;
     }
 
     public void initModelo() {
         ObservableList<String> marcaList = FXCollections.observableArrayList();
-        switch (dt1.get(0).getMarca()){
-            case("Aprilia"):
-               // marcaList.
-               // marcaList.addAll("RS", "RX125","SX");
-                break;
-            case("BMV"):
-                marcaList.addAll("RS", "RX125","SX");
-                break;
-            case("Derbi"):
-                break;
-            default:
-                System.out.println("Error en la selección de la marca de moto.");
-        }
+
     }
 
     public void initVersion() {
