@@ -26,19 +26,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class MotoUnknownPlate {
-    private MainController mainControllerr;
-    protected ObservableList<DataTestObject> dt1 = FXCollections.observableArrayList();
-    String path;
-    String producto;
-    Boolean matricula;
 
-    public MotoUnknownPlate() {
-        dt1.add(new DataTestObject());
-    }
-
-    public ObservableList<DataTestObject> getDataTestObject(){
-        return dt1;
-    }
+    DataTestObject dt1 = new DataTestObject();
 
     @FXML
     private ResourceBundle resources;
@@ -93,14 +82,14 @@ public class MotoUnknownPlate {
 
         idFechaMatriculac.setOnAction(actionEvent -> {
             LocalDate date = idFechaMatriculac.getValue();
-            dt1.get(0).setFechaMatriculacion(date);
+            dt1.setFechaMatriculacion(date);
             System.out.println("La fecha de matriculación seleccionada es: " + date);
         });
 
         idMarca.setOnAction(actionEvent -> {
             setMarcaObject();
             idTableView.getItems().clear();
-            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Marca",dt1.get(0).getMarca())));
+            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Marca",dt1.getMarca())));
             //borra("Marca");
         });
 
@@ -110,7 +99,7 @@ public class MotoUnknownPlate {
             }else {
                 setCilindradaObject();
                 idTableView.getItems().clear();
-                idTableView.setItems(FXCollections.observableArrayList(getDataTable("Cilindrada", dt1.get(0).getCilindrada())));
+                idTableView.setItems(FXCollections.observableArrayList(getDataTable("Cilindrada", dt1.getCilindrada())));
             }
            // borra("Cilindrada");
         });
@@ -118,7 +107,7 @@ public class MotoUnknownPlate {
         idModelo.setOnAction(actionEvent -> {
             setModeloObject();
             idTableView.getItems().clear();
-            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Modelo", dt1.get(0).getModelo())));
+            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Modelo", dt1.getModelo())));
             //borra("Modelo");
         });
 
@@ -128,13 +117,20 @@ public class MotoUnknownPlate {
             if(motoSeleccionada.getMarca().isEmpty()){
                 System.out.println("No has seleccionado ninguna versión");
             }else {
-                dt1.get(0).setMarca(motoSeleccionada.getMarca());
-                dt1.get(0).setModelo(motoSeleccionada.getModelo());
-                dt1.get(0).setCilindrada(motoSeleccionada.getCilindrada());
-                dt1.get(0).setVersion(motoSeleccionada.getVersion());
-                dt1.get(0).setAnyo(motoSeleccionada.getAnyo());
-                System.out.println("Se ha seleccionado la version: " + dt1.get(0).getVersion());
+                dt1.setMarca(motoSeleccionada.getMarca());
+                System.out.println("el producto"+ dt1.getMarca()+ motoSeleccionada.getMarca());
+                dt1.setModelo(motoSeleccionada.getModelo());
+                System.out.println("el producto"+ dt1.getModelo()+ motoSeleccionada.getModelo());
+                dt1.setCilindrada(motoSeleccionada.getCilindrada());
+                System.out.println("el producto"+ dt1.getCilindrada()+ motoSeleccionada.getCilindrada());
+                dt1.setVersion(motoSeleccionada.getVersion());
+                System.out.println("el producto"+ dt1.getVersion()+ motoSeleccionada.getVersion());
+                dt1.setAnyo(motoSeleccionada.getAnyo());
+                System.out.println("el producto"+ dt1.getVersion()+ motoSeleccionada.getVersion());
+                System.out.println("Se ha seleccionado la version: " + dt1.getVersion());
             }
+
+            insercionBBDD();
             changeScene();
         });
 
@@ -203,34 +199,38 @@ public class MotoUnknownPlate {
         idFechaMatriculac.setEditable(false);
         idFechaMatriculac.setValue(LocalDate.of(2021, Month.JANUARY, 1));
         System.out.println("La fecha por defecto es: 2021-01-01");
-        dt1.get(0).setFechaMatriculacion(LocalDate.of(2021, 01, 01));
+        dt1.setFechaMatriculacion(LocalDate.of(2021, 01, 01));
     }
 
     public void setMarcaObject() {
         String marca = idMarca.getSelectionModel().getSelectedItem();
-        dt1.get(0).setMarca(marca);
+        dt1.setMarca(marca);
         System.out.println("La marca seleccionada es:" + marca);
+        System.out.println("La producto al set marca es seleccionada es:" + dt1.getProducto());
+
     }
 
     public void setCilindradaObject() {
         String cilindrada = idCilindrada.getSelectionModel().getSelectedItem();
-        dt1.get(0).setCilindrada(cilindrada);
+        dt1.setCilindrada(cilindrada);
         System.out.println("La cilindrada seleccionada es:" + cilindrada);
     }
 
     public void setModeloObject() {
         String modelo = idModelo.getSelectionModel().getSelectedItem();
-        dt1.get(0).setModelo(modelo);
+        dt1.setModelo(modelo);
         System.out.println("El modelo seleccionada es:" + modelo);
     }
 
-    public void transferMainObject(MainController mainController) {
-        this.mainControllerr = mainController;
-        dt1 = mainControllerr.getDataTestObject();
-        System.out.println("nimero" + dt1.stream().count());
-        producto = mainController.getDataTestObject().get(0).getProducto();
-        System.out.println(producto);
-
+    public void insercionBBDD(){
+        try {
+            new DatabaseHandler().insertfechaMatricToAnyo(new DatabaseHandler().consultaIndiceDataTestObject(),
+                    dt1.getFechaMatriculacion(),dt1.getMarca(),dt1.getCilindrada(),dt1.getModelo(),dt1.getVersion(),dt1.getAnyo());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void changeScene(){
@@ -246,8 +246,6 @@ public class MotoUnknownPlate {
         mainWindows.setTitle("easyTest");
         mainWindows.setScene(new Scene(root, 877, 569));
         mainWindows.show();
-
-        new General().transferMainObject(this);
 
     }
 }

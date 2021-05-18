@@ -12,16 +12,16 @@ public class DataTestObject {
     public String modelo;
     public String version;
     public String anyo;
-    public String momentoCompra;
-    public String leHago;
-    public String duerme;
-    public String usoHabitual;
-    public String situacionPersonal;
-    public String situacionProfesional;
-    public String sexo;
-    public String carne;
-    public boolean seguroAnterior;
-    public Boolean otroConductor;
+    public String momentoCompra; //no comprado, menos 3
+    public String leHago; //hasta1000, hasta2000
+    public String duerme; //garaje, calle
+    public String usoHabitual; //fines, diarioFines
+    public String situacionPersonal; //casado, parejaHecho
+    public String situacionProfesional; //administrativo, autonomno
+    public String sexo; //hombre, mujer
+    public String carne;//B,A
+    public boolean seguroAnterior; //no-false, si-true
+    public Boolean otroConductor; //no-false, si-true
     public LocalDate fechaInicio;
     public LocalDate fechaCarne;
     public int edadConductor;

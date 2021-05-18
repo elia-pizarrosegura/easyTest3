@@ -25,17 +25,18 @@ public class MainController  {
     String producto;
     int selectedPlateOption=-1;
     String path;
-    private ObservableList<DataTestObject> dt1= FXCollections.observableArrayList();
+   // private ObservableList<DataTestObject> dt2= FXCollections.observableArrayList();
+    private DataTestObject dt1= new DataTestObject();
 
     public MainController(){
 
-        dt1.add(new DataTestObject());
+        //dt1.add(new DataTestObject());
     }
 
 
-    public ObservableList<DataTestObject> getDataTestObject(){
-        return dt1;
-    }
+    //public ObservableList<DataTestObject> getDataTestObject(){
+        //return dt1;
+    //}
 
     @FXML
     private ResourceBundle resources;
@@ -63,7 +64,8 @@ public class MainController  {
             selectedProduct= idProduct.getSelectionModel().getSelectedIndex();
             System.out.println(selectedProduct);
             initProductComboBox();
-            dt1.get(0).setProducto(idProduct.getSelectionModel().getSelectedItem());
+            dt1.setProducto(idProduct.getSelectionModel().getSelectedItem());
+            System.out.println(dt1.getProducto());
 
             choosePath();
         });
@@ -71,12 +73,19 @@ public class MainController  {
         idMatricula.setOnAction(actionEvent -> {
             selectedPlateOption= idMatricula.getSelectionModel().getSelectedIndex();
             System.out.println(selectedPlateOption);
-            if(selectedProduct==0)  dt1.get(0).setMatricula(false);
-            else if(selectedProduct==1) dt1.get(0).setMatricula(true);
+            if(selectedProduct==0)  dt1.setMatricula(false);
+            else if(selectedProduct==1) dt1.setMatricula(true);
             choosePath();
         });
 
         idContinuar1.setOnAction(actionEvent -> {
+            System.out.println("El producto a insertar en la base de datos es: "+ dt1.getProducto());
+            System.out.println("¿Conoczco la matricula? . Inserción en base de datos: "+ dt1.isMatricula());
+            try {
+               new DatabaseHandler().insertProductMatricula(new DatabaseHandler().consultaIndiceDataTestObject(),dt1.getProducto(), dt1.isMatricula());
+            } catch (SQLException | ClassNotFoundException throwables) {
+                throwables.printStackTrace();
+            }
             changeScene();
         });
 
@@ -124,7 +133,7 @@ public class MainController  {
         mainWindows.setScene(new Scene(root, 877, 569));
         mainWindows.show();
 
-        new MotoUnknownPlate().transferMainObject(this);
+        //new MotoUnknownPlate().transferMainObject(this);
 
     }
 
