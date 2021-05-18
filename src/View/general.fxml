@@ -18,7 +18,7 @@
             <Label layoutX="62.0" layoutY="6.0" prefHeight="17.0" prefWidth="101.0" text="Le hago..." textFill="#fffdfd" />
          </children>
       </Pane>
-      <Pane layoutX="43.0" layoutY="24.0" prefHeight="91.0" prefWidth="203.0" style="-fx-background-color: #283593 #283593 #283593 #283593; -fx-background-radius: 30;">
+      <Pane layoutX="43.0" layoutY="29.0" prefHeight="91.0" prefWidth="203.0" style="-fx-background-color: #283593 #283593 #283593 #283593; -fx-background-radius: 30;">
          <children>
             <RadioButton fx:id="idNoComprado1" layoutX="23.0" layoutY="32.0" mnemonicParsing="false" text="No lo he comprado aún" textFill="#f8f8f8" />
             <RadioButton fx:id="idMenos3meses1" layoutX="23.0" layoutY="60.0" mnemonicParsing="false" text="Hace menos de 3 meses" textFill="#f8f8f8" />
@@ -89,7 +89,7 @@
       </Pane>
       <Pane layoutX="267.0" layoutY="450.0" prefHeight="84.0" prefWidth="203.0" style="-fx-background-color: #283593 #283593 #283593 #283593; -fx-background-radius: 30;">
          <children>
-            <DatePicker fx:id="idFechaInicio1" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="170.0" />
+            <DatePicker fx:id="idFechaCarne" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="170.0" />
             <Label layoutX="18.0" layoutY="14.0" text="Fecha carné" textFill="#fffefe" />
          </children>
       </Pane>

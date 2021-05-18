@@ -1,6 +1,8 @@
 package Controller;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ResourceBundle;
 
 import Model.DataTestObject;
@@ -139,6 +141,13 @@ public class General {
         idNoConduceAlguienMas.setSelected(true);
         idAlguiemMasConduce.setToggleGroup(conduceOtro);
 
+    }
+
+    public void setFechaInicio() {
+        idFechaInicio.setEditable(false);
+        idFechaInicio.setValue(LocalDate.now());
+        System.out.println("La fecha por defecto es:"+ LocalDate.now());
+        dt1.get(0).setFechaInicio(LocalDate.now());
     }
 
     public void transferMainObject(MotoUnknownPlate controler) {
