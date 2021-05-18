@@ -106,7 +106,7 @@ public class General {
     private DatePicker idFechaInicio;
 
     @FXML
-    private DatePicker idFechaInicio1;
+    private DatePicker idFechaCarne;
 
     @FXML
     void initialize() {
@@ -140,6 +140,8 @@ public class General {
         idNoConduceAlguienMas.setToggleGroup(conduceOtro);
         idNoConduceAlguienMas.setSelected(true);
         idAlguiemMasConduce.setToggleGroup(conduceOtro);
+        setFechaInicio();
+        setFechaCarne();
 
     }
 
@@ -148,6 +150,17 @@ public class General {
         idFechaInicio.setValue(LocalDate.now());
         System.out.println("La fecha por defecto es:"+ LocalDate.now());
         dt1.get(0).setFechaInicio(LocalDate.now());
+    }
+
+    public void setFechaCarne() {
+        idFechaCarne.setEditable(false);
+        idFechaCarne.setValue(LocalDate.of(2015, Month.JANUARY, 1));
+        System.out.println("La fecha por defecto es:" + LocalDate.of(2015, Month.JANUARY, 1));
+        dt1.get(0).setFechaInicio(LocalDate.of(2015, Month.JANUARY, 1));
+    }
+
+    public void setEdadConductor(){
+
     }
 
     public void transferMainObject(MotoUnknownPlate controler) {
