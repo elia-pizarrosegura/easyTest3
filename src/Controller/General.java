@@ -162,6 +162,84 @@ public class General {
             }
         });
 
+        situacionPersonal.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idCasado.isSelected()) {
+                    dt1.setSituacionPersonal("casado");
+                }
+                if(idParejaHecho.isSelected()) {
+                    dt1.setSituacionPersonal("parejaHecho");
+                }
+            }
+        });
+
+        situacionProfesional.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idAdministrativo.isSelected()) {
+                    dt1.setSituacionProfesional("administrativo");
+                }
+                if(idAutonomo.isSelected()) {
+                    dt1.setSituacionProfesional("autonomo");
+                }
+            }
+        });
+
+        sexo.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idHombre.isSelected()) {
+                    dt1.setSexo("hombre");
+                }
+                if(idMujer.isSelected()) {
+                    dt1.setSexo("mujer");
+                }
+            }
+        });
+
+        tipoCarne.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idA.isSelected()) {
+                    dt1.setCarne("A");
+                }
+                if(idB.isSelected()) {
+                    dt1.setCarne("B");
+                }
+            }
+        });
+
+        seguroPrevio.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idSeguroMotoNo.isSelected()) {
+                    dt1.setSeguroAnterior(false);
+                }
+                if(idSeguroMotoSi.isSelected()) {
+                    dt1.setSeguroAnterior(true);
+                }
+            }
+        });
+
+        conduceOtro.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
+                System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
+                if(idNoConduceAlguienMas.isSelected()) {
+                    dt1.setOtroConductor(false);
+                }
+                if(idAlguiemMasConduce.isSelected()) {
+                    dt1.setOtroConductor(true);
+                }
+            }
+        });
+
     }
 
 
