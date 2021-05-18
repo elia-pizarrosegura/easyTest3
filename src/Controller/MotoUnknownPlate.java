@@ -1,6 +1,7 @@
 package Controller;
 
 import Data.LogInClass;
+import Data.MotoVersion;
 import DataBase.DatabaseHandler;
 import Model.DataTestObject;
 import javafx.beans.binding.Binding;
@@ -10,11 +11,15 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -51,11 +56,34 @@ public class MotoUnknownPlate {
     private DatePicker idFechaMatriculac;
 
     @FXML
+    private TableView<MotoVersion> idTableView;
+
+    @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
 
         initMarca();
         setFechaMatriculacionObject();
+
+        //Tabla MotoVersion
+        TableColumn marca= new TableColumn("Marca");
+        marca.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Marca"));
+        TableColumn cilindrada= new TableColumn("Cilindrada");
+        cilindrada.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Cilindrada"));
+        TableColumn modelo= new TableColumn("Modelo");
+        modelo.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Modelo"));
+        TableColumn version= new TableColumn("Version");
+        version.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Version"));
+        TableColumn anyo= new TableColumn("Anyo");
+        anyo.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Anyo"));
+
+        idTableView.getColumns().addAll(marca,cilindrada,modelo,version,anyo);
+
+        List<MotoVersion> tableData= new ArrayList<MotoVersion>();
+        tableData=new DatabaseHandler().getMotoVersionData();
+
+
+        idTableView.setItems(FXCollections.observableArrayList(tableData));
 
         idFechaMatriculac.setOnAction(actionEvent -> {
             LocalDate date = idFechaMatriculac.getValue();
@@ -78,7 +106,7 @@ public class MotoUnknownPlate {
         ObservableList<String> marcaList = FXCollections.observableArrayList();
         marcaList.addAll("APRILIA", "BMW", "DERBI");
         idMarca.setItems(marcaList);
-        Bindings.bindContentBidirectional(marcaList,getCilindradaList());
+        //Bindings.bindContentBidirectional(marcaList,getCilindradaList());
     }
 
     public ObservableList<String> getCilindradaList() throws SQLException, ClassNotFoundException {

@@ -4,12 +4,13 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a237e#1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MotoUnknownPlate">
    <children>
-      <Pane layoutX="101.0" layoutY="71.0" prefHeight="281.0" prefWidth="412.0" style="-fx-background-color: #283593 #283593; -fx-background-radius: 30;">
+      <Pane layoutX="174.0" layoutY="60.0" prefHeight="281.0" prefWidth="412.0" style="-fx-background-color: #283593 #283593; -fx-background-radius: 30;">
          <children>
             <ComboBox fx:id="idMarca" layoutX="219.0" layoutY="63.0" prefWidth="150.0" />
             <ComboBox fx:id="idCilindrada" layoutX="219.0" layoutY="105.0" prefWidth="150.0" />
@@ -24,5 +25,6 @@
             <Button fx:id="idContinuar" layoutX="153.0" layoutY="242.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Continuar" />
          </children>
       </Pane>
+      <TableView fx:id="idTableView" layoutX="-1.0" layoutY="183.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

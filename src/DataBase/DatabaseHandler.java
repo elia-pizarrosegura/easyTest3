@@ -1,6 +1,7 @@
 package DataBase;
 
 import Data.LogInClass;
+import Data.MotoVersion;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,6 +37,24 @@ public class DatabaseHandler extends Config {
         }
         return logIn;
 
+    }
+
+    public List<MotoVersion> getMotoVersionData() throws SQLException, ClassNotFoundException {
+        List<MotoVersion> list= new ArrayList<>();
+        String query="SELECT * FROM easyTest.MotoVersion";
+        PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()){
+            System.out.println(resultSet.getString("Marca"));
+            MotoVersion m =new MotoVersion(resultSet.getString("Marca"),
+                    resultSet.getString("Cilindrada"),
+                    resultSet.getString("Modelo"),
+                    resultSet.getString("Version"),
+                    resultSet.getString("Anyo"));
+            list.add(m);
+        }
+        System.out.println("Se han extraido los datos para la tabla Moto Versiones.");
+        return list;
     }
 
     public List<String> getCilindradaList(String marca) throws SQLException, ClassNotFoundException {
