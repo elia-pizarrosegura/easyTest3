@@ -9,9 +9,14 @@ import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -23,12 +28,16 @@ import java.util.ResourceBundle;
 public class MotoUnknownPlate {
     private MainController mainControllerr;
     protected ObservableList<DataTestObject> dt1 = FXCollections.observableArrayList();
-    ;
+    String path;
     String producto;
     Boolean matricula;
 
     public MotoUnknownPlate() {
         dt1.add(new DataTestObject());
+    }
+
+    public ObservableList<DataTestObject> getDataTestObject(){
+        return dt1;
     }
 
     @FXML
@@ -126,6 +135,7 @@ public class MotoUnknownPlate {
                 dt1.get(0).setAnyo(motoSeleccionada.getAnyo());
                 System.out.println("Se ha seleccionado la version: " + dt1.get(0).getVersion());
             }
+            changeScene();
         });
 
         idRefresh.setOnAction(actionEvent -> {
@@ -214,12 +224,30 @@ public class MotoUnknownPlate {
         System.out.println("El modelo seleccionada es:" + modelo);
     }
 
-    public void setMainController(MainController mainController) {
+    public void transferMainObject(MainController mainController) {
         this.mainControllerr = mainController;
         dt1 = mainControllerr.getDataTestObject();
         System.out.println("nimero" + dt1.stream().count());
         producto = mainController.getDataTestObject().get(0).getProducto();
         System.out.println(producto);
+
+    }
+
+    public void changeScene(){
+
+        idContinuar.getScene().getWindow().hide();
+        Stage mainWindows= new Stage();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../View/general.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mainWindows.setTitle("easyTest");
+        mainWindows.setScene(new Scene(root, 500,500));
+        mainWindows.show();
+
+        new General().transferMainObject(this);
 
     }
 }

@@ -124,7 +124,7 @@ public class MainController  {
         mainWindows.setScene(new Scene(root, 500,500));
         mainWindows.show();
 
-        new MotoUnknownPlate().setMainController(this);
+        new MotoUnknownPlate().transferMainObject(this);
 
     }
 

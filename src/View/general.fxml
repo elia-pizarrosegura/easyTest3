@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a237e#1a237e #1a237e#1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.General">
+   <children>
+      <Pane layoutX="42.0" layoutY="26.0" prefHeight="100.0" prefWidth="203.0" style="-fx-background-color: #283593 #283593 #283593 #283593; -fx-background-radius: 30;">
+         <children>
+            <RadioButton fx:id="idNoComprado" layoutX="23.0" layoutY="32.0" mnemonicParsing="false" text="No lo he comprado aún" textFill="#f8f8f8" />
+            <RadioButton fx:id="idMenos3meses" layoutX="23.0" layoutY="60.0" mnemonicParsing="false" text="Hace menos de 3 meses" textFill="#f8f8f8" />
+            <Label layoutX="62.0" layoutY="6.0" prefHeight="17.0" prefWidth="101.0" text="Compré mi moto" textFill="#fffdfd" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
