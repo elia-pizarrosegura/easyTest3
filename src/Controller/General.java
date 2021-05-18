@@ -109,7 +109,35 @@ public class General {
     @FXML
     void initialize() {
         idNoComprado1.setToggleGroup(compraMotoGroup);
+        idNoComprado1.setSelected(true);
         idMenos3meses1.setToggleGroup(compraMotoGroup);
+        idHasta1000.setToggleGroup(alAnyoHago);
+        idHasta1000.setSelected(true);
+        idHasta2000.setToggleGroup(alAnyoHago);
+        idEnCalle.setToggleGroup(duerme);
+        idGarajeColectivo.setToggleGroup(duerme);
+        idGarajeColectivo.setSelected(true);
+        idDiarioFindes.setToggleGroup(usoHabitual);
+        idSoloFines.setToggleGroup(usoHabitual);
+        idSoloFines.setSelected(true);
+        idCasado.setToggleGroup(situacionPersonal);
+        idCasado.setSelected(true);
+        idParejaHecho.setToggleGroup(situacionPersonal);
+        idAdministrativo.setToggleGroup(situacionProfesional);
+        idAdministrativo.setSelected(true);
+        idAutonomo.setToggleGroup(situacionProfesional);
+        idHombre.setToggleGroup(sexo);
+        idHombre.setSelected(true);
+        idMujer.setToggleGroup(sexo);
+        idA.setToggleGroup(tipoCarne);
+        idB.setToggleGroup(tipoCarne);
+        idB.setSelected(true);
+        idSeguroMotoNo.setToggleGroup(seguroPrevio);
+        idSeguroMotoNo.setSelected(true);
+        idSeguroMotoSi.setToggleGroup(seguroPrevio);
+        idNoConduceAlguienMas.setToggleGroup(conduceOtro);
+        idNoConduceAlguienMas.setSelected(true);
+        idAlguiemMasConduce.setToggleGroup(conduceOtro);
 
     }
 

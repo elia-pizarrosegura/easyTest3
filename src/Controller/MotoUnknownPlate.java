@@ -244,7 +244,7 @@ public class MotoUnknownPlate {
             e.printStackTrace();
         }
         mainWindows.setTitle("easyTest");
-        mainWindows.setScene(new Scene(root, 500,500));
+        mainWindows.setScene(new Scene(root, 877, 569));
         mainWindows.show();
 
         new General().transferMainObject(this);

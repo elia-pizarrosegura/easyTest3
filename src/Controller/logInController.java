@@ -67,7 +67,7 @@ public class logInController {
             Stage mainWindows= new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("../View/main.fxml"));
             mainWindows.setTitle("easyTest");
-            mainWindows.setScene(new Scene(root, 500,500));
+            mainWindows.setScene(new Scene(root, 877, 569));
             mainWindows.show();
 
         }
