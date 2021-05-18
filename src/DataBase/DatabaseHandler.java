@@ -57,6 +57,25 @@ public class DatabaseHandler extends Config {
         return list;
     }
 
+    public List<MotoVersion> getMotoVersionDataFilterBy(String filtro, String value) throws SQLException, ClassNotFoundException {
+        List<MotoVersion> list= new ArrayList<>();
+        String query=String.format("SELECT * FROM easyTest.MotoVersion WHERE %s='%s'",filtro,value);
+        PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()){
+            System.out.println(resultSet.getString("Marca"));
+            MotoVersion m =new MotoVersion(resultSet.getString("Marca"),
+                    resultSet.getString("Cilindrada"),
+                    resultSet.getString("Modelo"),
+                    resultSet.getString("Version"),
+                    resultSet.getString("Anyo"));
+            list.add(m);
+        }
+        System.out.println("Se han extraido los datos para la tabla Moto Versiones filtradas por la columna: "
+                + filtro + "y valor: "+value);
+        return list;
+    }
+
     public List<String> getCilindradaList(String marca) throws SQLException, ClassNotFoundException {
         List<String> tiposCilindrada = null;
         String query=String.format("SELECT distinct Cilindrada FROM easyTest.MotoVersion where Marca='%s'",marca);

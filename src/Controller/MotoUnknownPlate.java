@@ -9,10 +9,7 @@ import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -50,20 +47,24 @@ public class MotoUnknownPlate {
     private ComboBox<String> idModelo;
 
     @FXML
-    private ComboBox<String> idVersion;
-
-    @FXML
     private DatePicker idFechaMatriculac;
 
     @FXML
     private TableView<MotoVersion> idTableView;
 
     @FXML
+    private Button idRefresh;
+
+    @FXML
+    private Button idContinuar;
+
+    @FXML
     void initialize() throws SQLException, ClassNotFoundException {
 
-
-        initMarca();
         setFechaMatriculacionObject();
+        initMarca();
+        initCilindrada();
+        initModelo();
 
         //Tabla MotoVersion
         TableColumn marca= new TableColumn("Marca");
@@ -76,13 +77,9 @@ public class MotoUnknownPlate {
         version.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Version"));
         TableColumn anyo= new TableColumn("Anyo");
         anyo.setCellValueFactory(new PropertyValueFactory<MotoVersion,String>("Anyo"));
-
         idTableView.getColumns().addAll(marca,cilindrada,modelo,version,anyo);
-
-        List<MotoVersion> tableData= new ArrayList<MotoVersion>();
-        tableData=new DatabaseHandler().getMotoVersionData();
-
-
+        //Cargar la tabla con los datos de la BBDD
+        List<MotoVersion> tableData= new DatabaseHandler().getMotoVersionData();
         idTableView.setItems(FXCollections.observableArrayList(tableData));
 
         idFechaMatriculac.setOnAction(actionEvent -> {
@@ -93,38 +90,103 @@ public class MotoUnknownPlate {
 
         idMarca.setOnAction(actionEvent -> {
             setMarcaObject();
-
+            idTableView.getItems().clear();
+            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Marca",dt1.get(0).getMarca())));
+            //borra("Marca");
         });
 
         idCilindrada.setOnAction(actionEvent -> {
+            if(idCilindrada.getSelectionModel().isSelected(0)){
+                System.out.println("Por favor, seleccione un rango válido");
+            }else {
+                setCilindradaObject();
+                idTableView.getItems().clear();
+                idTableView.setItems(FXCollections.observableArrayList(getDataTable("Cilindrada", dt1.get(0).getCilindrada())));
+            }
+           // borra("Cilindrada");
+        });
 
+        idModelo.setOnAction(actionEvent -> {
+            setModeloObject();
+            idTableView.getItems().clear();
+            idTableView.setItems(FXCollections.observableArrayList(getDataTable("Modelo", dt1.get(0).getModelo())));
+            //borra("Modelo");
+        });
+
+
+        idContinuar.setOnAction(actionEvent -> {
+            MotoVersion motoSeleccionada= idTableView.getSelectionModel().getSelectedItem();
+            if(motoSeleccionada.getMarca().isEmpty()){
+                System.out.println("No has seleccionado ninguna versión");
+            }else {
+                dt1.get(0).setMarca(motoSeleccionada.getMarca());
+                dt1.get(0).setModelo(motoSeleccionada.getModelo());
+                dt1.get(0).setCilindrada(motoSeleccionada.getCilindrada());
+                dt1.get(0).setVersion(motoSeleccionada.getVersion());
+                dt1.get(0).setAnyo(motoSeleccionada.getAnyo());
+                System.out.println("Se ha seleccionado la version: " + dt1.get(0).getVersion());
+            }
+        });
+
+        idRefresh.setOnAction(actionEvent -> {
+            idTableView.getItems().clear();
+            idTableView.setItems(FXCollections.observableArrayList(tableData));
         });
 
     }
 
+    public void borra(String noBorrar){
+        switch (noBorrar){
+            case("Marca"):
+                idCilindrada.getSelectionModel().select(0);
+                idModelo.getSelectionModel().select(0);
+                System.out.println("borrar cilindrada y modelo");
+                break;
+            case("Cilindrada"):
+                idModelo.getSelectionModel().select(0);
+                idMarca.getSelectionModel().select(0);
+                break;
+            case("Modelo"):
+                idCilindrada.getSelectionModel().select(0);
+                idMarca.getSelectionModel().select(0);
+                break;
+            default:
+                System.out.println("No se ha seleccionado un combobox que borrar.");
+            }
+        }
+
+
     public void initMarca() throws SQLException, ClassNotFoundException {
         ObservableList<String> marcaList = FXCollections.observableArrayList();
-        marcaList.addAll("APRILIA", "BMW", "DERBI");
+        marcaList.addAll("...","APRILIA", "BMV", "DERBI");
         idMarca.setItems(marcaList);
-        //Bindings.bindContentBidirectional(marcaList,getCilindradaList());
+        idMarca.getSelectionModel().select(0);
     }
 
-    public ObservableList<String> getCilindradaList() throws SQLException, ClassNotFoundException {
-
-        ObservableList<String> cilindradasTipos= (ObservableList<String>) new DatabaseHandler().getCilindradaList(dt1.get(0).getMarca());
-        idMarca.setItems(cilindradasTipos);
-        return cilindradasTipos;
+    public void initCilindrada() throws SQLException, ClassNotFoundException {
+        ObservableList<String> cilindradaList = FXCollections.observableArrayList();
+        cilindradaList.addAll("...","1-50", "51-125", "125-250");
+        idCilindrada.setItems(cilindradaList);
+        idCilindrada.getSelectionModel().select(0);
     }
 
-    public void initModelo() {
-        ObservableList<String> marcaList = FXCollections.observableArrayList();
-
+    public void initModelo() throws SQLException, ClassNotFoundException {
+        ObservableList<String> modeloList = FXCollections.observableArrayList();
+        modeloList.addAll("...","SX", "RX", "C1");
+        idModelo.setItems(modeloList);
+        idModelo.getSelectionModel().select(0);
     }
 
-    public void initVersion() {
-        ObservableList<String> marcaList = FXCollections.observableArrayList();
-        marcaList.addAll("Eléctrica", "1-50", "51 a 125");
-        idMarca.setItems(marcaList);
+    public List<MotoVersion> getDataTable(String filtro, String value){
+        List<MotoVersion> tableData2= null;
+        try {
+            tableData2 = new DatabaseHandler().getMotoVersionDataFilterBy(filtro,value);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return tableData2;
     }
 
     public void setFechaMatriculacionObject() {
@@ -138,6 +200,18 @@ public class MotoUnknownPlate {
         String marca = idMarca.getSelectionModel().getSelectedItem();
         dt1.get(0).setMarca(marca);
         System.out.println("La marca seleccionada es:" + marca);
+    }
+
+    public void setCilindradaObject() {
+        String cilindrada = idCilindrada.getSelectionModel().getSelectedItem();
+        dt1.get(0).setCilindrada(cilindrada);
+        System.out.println("La cilindrada seleccionada es:" + cilindrada);
+    }
+
+    public void setModeloObject() {
+        String modelo = idModelo.getSelectionModel().getSelectedItem();
+        dt1.get(0).setModelo(modelo);
+        System.out.println("El modelo seleccionada es:" + modelo);
     }
 
     public void setMainController(MainController mainController) {

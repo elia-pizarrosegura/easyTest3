@@ -11,11 +11,12 @@ public class DataTestObject {
     public String cilindrada;
     public String modelo;
     public String version;
+    public String anyo;
 
     public DataTestObject(){
     }
 
-    public DataTestObject(String producto, boolean matricula, LocalDate fechaMatriculacion, String marca, String cilindrada, String modelo, String version) {
+    public DataTestObject(String producto, boolean matricula, LocalDate fechaMatriculacion, String marca, String cilindrada, String modelo, String version, String anyo) {
         this.producto = producto;
         this.matricula = matricula;
         this.fechaMatriculacion = fechaMatriculacion;
@@ -23,8 +24,16 @@ public class DataTestObject {
         this.cilindrada = cilindrada;
         this.modelo = modelo;
         this.version = version;
+        this.anyo= anyo;
     }
 
+    public String getAnyo() {
+        return anyo;
+    }
+
+    public void setAnyo(String anyo) {
+        this.anyo = anyo;
+    }
 
     public String getMarca() {
         return marca;
