@@ -1,6 +1,6 @@
 package Controller;
 
-import Data.LogInClass;
+import Model.LogInClass;
 import DataBase.DatabaseHandler;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

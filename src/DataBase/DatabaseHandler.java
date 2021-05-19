@@ -1,7 +1,7 @@
 package DataBase;
 
-import Data.LogInClass;
-import Data.MotoVersion;
+import Model.LogInClass;
+import Model.MotoVersion;
 
 import java.sql.*;
 import java.time.LocalDate;

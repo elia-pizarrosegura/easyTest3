@@ -1,11 +1,8 @@
 package Controller;
 
-import Data.LogInClass;
-import Data.MotoVersion;
+import Model.MotoVersion;
 import DataBase.DatabaseHandler;
 import Model.DataTestObject;
-import javafx.beans.binding.Binding;
-import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -21,7 +18,6 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
