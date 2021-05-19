@@ -81,7 +81,7 @@ public class DatabaseHandler extends Config {
 
         PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
         preparedStatement.executeUpdate();
-        
+
         System.out.println("Se ha realizado la inserción en línea "+ lineaInserción+ "de los siguientes datos: "+
                 "momento de la compra:"+momentoCompra+" al año le hago:"+leHago+ " duerme en:"+duerme+ " usoHabitual:"+usoHabitual+
                 " situacion Personal:"+ situacionPersonal+ " situacion Profesional:" +situacionProfesional+ " sexo: "+sexo+ " tipo Carne"+ carne+

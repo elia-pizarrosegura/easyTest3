@@ -294,8 +294,8 @@ public class General {
     }
 
     public void setFechaNacimiento() {
-        idFechaCarne.setEditable(false);
-        idFechaCarne.setValue(LocalDate.of(1984, Month.JANUARY, 1));
+        idFechaNacimiento.setEditable(false);
+        idFechaNacimiento.setValue(LocalDate.of(1984, Month.JANUARY, 1));
         System.out.println("La fecha por defecto es:" + LocalDate.of(1984, Month.JANUARY, 1));
         dt1.setFechaNacimiento(LocalDate.of(2015, Month.JANUARY, 1));
     }
