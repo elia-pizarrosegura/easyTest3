@@ -1,18 +1,27 @@
 package Controller;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ResourceBundle;
 
+import Data.MotoVersion;
+import DataBase.DatabaseHandler;
 import Model.DataTestObject;
+import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class General {
 
@@ -33,9 +42,6 @@ public class General {
 
     @FXML
     private URL location;
-
-    @FXML
-    private AnchorPane idEdad;
 
     @FXML
     private RadioButton idHasta1000;
@@ -104,11 +110,41 @@ public class General {
     private DatePicker idFechaCarne;
 
     @FXML
+    private DatePicker idFechaNacimiento;
+
+    @FXML
+    private Button idContinuar;
+
+    @FXML
     void initialize() {
 
         iniciarRadioButtons();
         setFechaInicio();
         setFechaCarne();
+        setFechaNacimiento();
+
+        idFechaInicio.setOnAction(actionEvent -> {
+                LocalDate date = idFechaInicio.getValue();
+                dt1.setFechaInicio(date);
+                System.out.println("La fecha de inicio seleccionada es: " + date);
+        });
+
+        idFechaCarne.setOnAction(actionEvent -> {
+            LocalDate date = idFechaCarne.getValue();
+            dt1.setFechaCarne(date);
+            System.out.println("La fecha de carné seleccionada es: " + date);
+        });
+
+        idFechaNacimiento.setOnAction(actionEvent -> {
+            LocalDate date = idFechaNacimiento.getValue();
+            dt1.setFechaInicio(date);
+            System.out.println("La fecha de nacimiento seleccionada es: " + date);
+        });
+
+        idContinuar.setOnAction(actionEvent -> {
+            insercionBBDD();
+            changeScene();
+        });
 
         compraMotoGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
             @Override
@@ -254,7 +290,14 @@ public class General {
         idFechaCarne.setEditable(false);
         idFechaCarne.setValue(LocalDate.of(2015, Month.JANUARY, 1));
         System.out.println("La fecha por defecto es:" + LocalDate.of(2015, Month.JANUARY, 1));
-        dt1.setFechaInicio(LocalDate.of(2015, Month.JANUARY, 1));
+        dt1.setFechaCarne(LocalDate.of(2015, Month.JANUARY, 1));
+    }
+
+    public void setFechaNacimiento() {
+        idFechaCarne.setEditable(false);
+        idFechaCarne.setValue(LocalDate.of(1984, Month.JANUARY, 1));
+        System.out.println("La fecha por defecto es:" + LocalDate.of(1984, Month.JANUARY, 1));
+        dt1.setFechaNacimiento(LocalDate.of(2015, Month.JANUARY, 1));
     }
 
     public void iniciarRadioButtons(){
@@ -290,17 +333,46 @@ public class General {
         idB.setToggleGroup(tipoCarne);
         idB.setSelected(true);
         dt1.setCarne("B");
+
         idSeguroMotoNo.setToggleGroup(seguroPrevio);
+        idSeguroMotoSi.setToggleGroup(seguroPrevio);
         idSeguroMotoNo.setSelected(true);
         dt1.setSeguroAnterior(false);
-        idSeguroMotoSi.setToggleGroup(seguroPrevio);
+
+        idAlguiemMasConduce.setToggleGroup(conduceOtro);
         idNoConduceAlguienMas.setToggleGroup(conduceOtro);
         idNoConduceAlguienMas.setSelected(true);
-        dt1.setSeguroAnterior(false);
-        idAlguiemMasConduce.setToggleGroup(conduceOtro);
-    }
-
-    public void setEdadConductor(){
+        dt1.setOtroConductor(false);
 
     }
+
+    public void insercionBBDD(){
+        try {
+            new DatabaseHandler().insertarDatosGenerales(new DatabaseHandler().consultaIndiceDataTestObject(),
+                    dt1.getMomentoCompra(),dt1.getLeHago(),dt1.getDuerme(),dt1.getUsoHabitual(),dt1.getSituacionPersonal(),dt1.getSituacionPersonal(),
+            dt1.getSexo(),dt1.getCarne(),dt1.isSeguroAnterior(),dt1.isOtroConductor(),dt1.getFechaInicio(),
+                    dt1.getFechaCarne(),dt1.getFechaNacimiento());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void changeScene(){
+
+        idContinuar.getScene().getWindow().hide();
+        Stage mainWindows= new Stage();
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("../View/final.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mainWindows.setTitle("easyTest");
+        mainWindows.setScene(new Scene(root, 877, 569));
+        mainWindows.show();
+
+    }
+
 }

@@ -1,15 +1,69 @@
 
-]	java:S125;"<This block of commented-out lines of code should be removed.(™¶¯âşÿÿÿÿ8¢ùÿº—/
-U	java:S106S"9Replace this use of System.out or System.err by a logger.(¤¬”­8£Ğº—/
-€
-java:S1450"^Remove the "mainControllerr" field and declare it as a local variable in the relevant methods.(Œš‚üÿÿÿÿ8™Óğ»—/
-X	java:S1257"<This block of commented-out lines of code should be removed.(Ìîûå8ÔÄê»—/
-Z	java:S106["9Replace this use of System.out or System.err by a logger.(õ¼ûÿÿÿÿ8êÆÃ»—/
+V	java:S106Ş"9Replace this use of System.out or System.err by a logger.(ºæ«Ú8óÈĞÿ—/
+[	java:S106"9Replace this use of System.out or System.err by a logger.(˜¸ğèûÿÿÿÿ8ÿÓ‹†˜/
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
-H
-java:S14816"&Remove this unused "m" local variable.(Ôó«úÿÿÿÿ8ª‹é»—/
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•Åû®ıÿÿÿÿ8ùâ¿¹—/
-X	java:S125N"<This block of commented-out lines of code should be removed.( ©Öç8Òßıº—/
-X	java:S125U"<This block of commented-out lines of code should be removed.(ò´Æ8äÏ”»—/
-U	java:S106]"9Replace this use of System.out or System.err by a logger.(õãÈÏ8üÁó»—/
+m
+java:S1192F"KDefine a constant instead of duplicating this literal "Cilindrada" 4 times.(†¬——ûÿÿÿÿ8šçı—/
+]	java:S125]"<This block of commented-out lines of code should be removed.(Óïßûÿÿÿÿ8×È•€˜/
+Œ
+java:S1130¬"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(òÄ˜ª8¦§Éş—/
+V	java:S106 "9Replace this use of System.out or System.err by a logger.(™ƒŞ«8¿¶ÿÿ—/
+[	java:S106Ø"9Replace this use of System.out or System.err by a logger.(Õ”ôçıÿÿÿÿ8óÈĞÿ—/
+i
+java:S1192y"LDefine a constant instead of duplicating this literal "el producto" 5 times.(ÜœãÉ8­ñƒ†˜/
+U	java:S106y"9Replace this use of System.out or System.err by a logger.(ÜœãÉ8ü‹‚†˜/
+V	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(¤¬”­8óÈĞÿ—/
+Œ
+java:S1130³"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ó„üÜ8¦§Éş—/
+Q
+java:S3740D"/Provide the parametrized type for this generic.(İ¡¼Œüÿÿÿÿ8ÇÀü—/
+V	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(§íá8á¯«‡˜/
+X	java:S125h"<This block of commented-out lines of code should be removed.(ãÃ÷¨8øı•€˜/
+U	java:S106•"9Replace this use of System.out or System.err by a logger.(ŸØ¿O8ºÄùÿ—/
+Q
+java:S3740F"/Provide the parametrized type for this generic.(†¬——ûÿÿÿÿ8ƒ…Ãü—/
+Z	java:S106v"9Replace this use of System.out or System.err by a logger.(‚åöÈşÿÿÿÿ8¤ êş—/
+Q
+java:S3740H"/Provide the parametrized type for this generic.(“†¾µüÿÿÿÿ8•ìéü—/
+\
+java:S1128":Remove this unused import 'javafx.beans.binding.Bindings'.(ÕÔ‡úÿÿÿÿ8»œÙı—/
+—
+java:S1130³"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ó„üÜ8¦§Éş—/
+Q
+java:S3740F"/Provide the parametrized type for this generic.(†¬——ûÿÿÿÿ8ƒ…Ãü—/
+—
+java:S1130¥"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(éë®„8¦§Éş—/
+U	java:S106}"9Replace this use of System.out or System.err by a logger.(©Ëß8ÿÓ‹†˜/
+Q
+java:S3740H"/Provide the parametrized type for this generic.(“†¾µüÿÿÿÿ8•ìéü—/
+—
+java:S1130¬"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(òÄ˜ª8¦§Éş—/
+Z	java:S106V"9Replace this use of System.out or System.err by a logger.(ª—´‘ûÿÿÿÿ8±Õ¶×—/
+U	java:S106b"9Replace this use of System.out or System.err by a logger.(åò¹•8‰ºÉÿ—/
+Œ
+java:S1130¥"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(éë®„8¦§Éş—/
+L
+java:S3740J"/Provide the parametrized type for this generic.(Ãô„Ä8•ìéü—/
+L
+java:S3740J"/Provide the parametrized type for this generic.(Ãô„Ä8•ìéü—/
+L
+java:S3740L"/Provide the parametrized type for this generic.(‡ÔëÉ8•ìéü—/
+V	java:S106É"9Replace this use of System.out or System.err by a logger.(ÍĞÌ8óÈĞÿ—/
+N
+java:S1128",Remove this unused import 'Data.LogInClass'.(ê‰áîûÿÿÿÿ8×‰ı—/
+h
+java:S1192D"FDefine a constant instead of duplicating this literal "Marca" 4 times.(İ¡¼Œüÿÿÿÿ8ŸÉı—/
+i
+java:S1192H"GDefine a constant instead of duplicating this literal "Modelo" 4 times.(“†¾µüÿÿÿÿ8¨Ÿ„ş—/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(˜¸ğèûÿÿÿÿ8ÿÓ‹†˜/
+[	java:S106‚"9Replace this use of System.out or System.err by a logger.(ˆí‡ıøÿÿÿÿ8ãÂÙş—/
+[
+java:S1128"9Remove this unused import 'javafx.beans.binding.Binding'.(§ØÊ¸ıÿÿÿÿ8á¸ß—/
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Ê™¯ı—/
+Q
+java:S3740D"/Provide the parametrized type for this generic.(İ¡¼Œüÿÿÿÿ8ÇÀü—/
+X	java:S125o"<This block of commented-out lines of code should be removed.( €½Ò8Éâ•€˜/
+Z	java:S106{"9Replace this use of System.out or System.err by a logger.( •ÊÍüÿÿÿÿ8­ñƒ†˜/
+L
+java:S3740L"/Provide the parametrized type for this generic.(‡ÔëÉ8•ìéü—/

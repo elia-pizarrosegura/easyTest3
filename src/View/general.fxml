@@ -4,10 +4,8 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-
 
 <AnchorPane fx:id="idEdad" prefHeight="569.0" prefWidth="877.0" style="-fx-background-color: #1a237e#1a237e #1a237e#1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.General">
    <children>
@@ -95,10 +93,10 @@
       </Pane>
       <Pane layoutX="498.0" layoutY="450.0" prefHeight="84.0" prefWidth="197.0" style="-fx-background-color: #283593 #283593 #283593 #283593; -fx-background-radius: 30;">
          <children>
-            <TextField layoutX="18.0" layoutY="42.0" />
-            <Label layoutX="57.0" layoutY="12.0" text="Edad conductor" textFill="#fffefe" />
+            <Label layoutX="57.0" layoutY="12.0" text="Fecha Nacimiento" textFill="#fffefe" />
+            <DatePicker fx:id="idFechaNacimiento" layoutX="14.0" layoutY="42.0" prefHeight="26.0" prefWidth="170.0" />
          </children>
       </Pane>
-      <Button layoutX="633.0" layoutY="322.0" mnemonicParsing="false" text="Continuar" />
+      <Button fx:id="idContinuar" layoutX="633.0" layoutY="322.0" mnemonicParsing="false" text="Continuar" />
    </children>
 </AnchorPane>

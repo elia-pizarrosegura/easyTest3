@@ -1,0 +1,23 @@
+
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(üúÏşÿÿÿÿ8ğ«†Û—/
+q
+java:S2095%"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8øóÛ—/
+]	java:S125"<This block of commented-out lines of code should be removed.(†Èöíúÿÿÿÿ8¬ÔÛ—/
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(èÛŸ±ûÿÿÿÿ8Î–ÈÚ—/
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(«‰ĞÖÿÿÿÿÿ8ğ«†Û—/
+g
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(½©°Ïûÿÿÿÿ8×«ÌÚ—/
+t
+java:S1450
+"XRemove the "dbHandler" field and declare it as a local variable in the relevant methods.(Û©£?8ÎĞËÚ—/
+‚
+java:S1450"`Remove the "preparedStatement" field and declare it as a local variable in the relevant methods.(èÛŸ±ûÿÿÿÿ8«ŠÚÚ—/
+a
+java:S1124
+"EReorder the modifiers to comply with the Java Language Specification.(Û©£?8×«ÌÚ—/
+q
+java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8É²¤Û—/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Ÿ¨€
+q
+java:S20950"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(â…ÍÆÿÿÿÿÿ8¬ÔÛ—/

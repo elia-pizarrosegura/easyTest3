@@ -1,0 +1,17 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˜İ¥ñ
+x
+java:S1104"VMake Cilindrada a static final constant or non-public and provide accessors if needed.(ÂıŞÚüÿÿÿÿ8›‚âü—/
+u
+java:S1104"SMake Version a static final constant or non-public and provide accessors if needed.(Ïõéıÿÿÿÿ8›‚âü—/
+r
+java:S1104	"PMake Anyo a static final constant or non-public and provide accessors if needed.(–”³Ìùÿÿÿÿ8›‚âü—/
+s
+java:S1104"QMake Marca a static final constant or non-public and provide accessors if needed.(öıªíüÿÿÿÿ8›‚âü—/
+t
+java:S1104"RMake Modelo a static final constant or non-public and provide accessors if needed.(§ôŞ¼üÿÿÿÿ8›‚âü—/
+v	java:S116"URename this field "Cilindrada" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂıŞÚüÿÿÿÿ8›‚âü—/
+r	java:S116"QRename this field "Modelo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ôŞ¼üÿÿÿÿ8›‚âü—/
+s	java:S116"RRename this field "Version" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïõéıÿÿÿÿ8›‚âü—/
+q	java:S116"PRename this field "Marca" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öıªíüÿÿÿÿ8›‚âü—/
+p	java:S116	"ORename this field "Anyo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–”³Ìùÿÿÿÿ8›‚âü—/

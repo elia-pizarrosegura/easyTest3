@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class DataTestObject {
     public String producto;
@@ -20,11 +19,11 @@ public class DataTestObject {
     public String situacionProfesional; //administrativo, autonomno
     public String sexo; //hombre, mujer
     public String carne;//B,A
-    public boolean seguroAnterior; //no-false, si-true
+    public Boolean seguroAnterior; //no-false, si-true
     public Boolean otroConductor; //no-false, si-true
     public LocalDate fechaInicio;
     public LocalDate fechaCarne;
-    public int edadConductor;
+    public LocalDate fechaNacimiento;
 
     public DataTestObject(){
     }
@@ -34,7 +33,7 @@ public class DataTestObject {
                           String anyo, String momentoCompra, String leHago, String duerme,
                           String usoHabitual, String situacionPersonal, String situacionProfesional,
                           String sexo, String carne, boolean seguroAnterior, Boolean otroConductor,
-                          LocalDate fechaInicio, LocalDate fechaCarne, int edadConductor) {
+                          LocalDate fechaInicio, LocalDate fechaCarne, LocalDate fechaNacimiento) {
         this.producto = producto;
         this.matricula = matricula;
         this.fechaMatriculacion = fechaMatriculacion;
@@ -55,7 +54,7 @@ public class DataTestObject {
         this.otroConductor = otroConductor;
         this.fechaInicio = fechaInicio;
         this.fechaCarne = fechaCarne;
-        this.edadConductor = edadConductor;
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getMomentoCompra() {
@@ -130,7 +129,7 @@ public class DataTestObject {
         this.seguroAnterior = seguroAnterior;
     }
 
-    public Boolean getOtroConductor() {
+    public Boolean isOtroConductor() {
         return otroConductor;
     }
 
@@ -154,12 +153,12 @@ public class DataTestObject {
         this.fechaCarne = fechaCarne;
     }
 
-    public int getEdadConductor() {
-        return edadConductor;
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setEdadConductor(int edadConductor) {
-        this.edadConductor = edadConductor;
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getAnyo() {

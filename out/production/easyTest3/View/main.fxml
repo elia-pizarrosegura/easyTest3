@@ -6,12 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+<AnchorPane prefHeight="569.0" prefWidth="877.0" style="-fx-background-color: #1a237e;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
    <children>
-      <Pane layoutX="103.0" layoutY="107.0" prefHeight="172.0" prefWidth="406.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+      <Pane layoutX="236.0" layoutY="188.0" prefHeight="193.0" prefWidth="406.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
          <children>
             <ComboBox fx:id="idProduct" layoutX="220.0" layoutY="32.0" prefWidth="150.0" />
-            <Button fx:id="idContinuar1" layoutX="168.0" layoutY="132.0" mnemonicParsing="false" text="Continuar" />
+            <Button fx:id="idContinuar1" layoutX="167.0" layoutY="148.0" mnemonicParsing="false" text="Continuar" />
             <Label layoutX="87.0" layoutY="91.0" prefHeight="17.0" prefWidth="64.0" text="Matricula" textFill="#fdfbfb" />
             <Label layoutX="93.0" layoutY="32.0" prefHeight="26.0" prefWidth="58.0" text="Producto" textFill="#fdfbfb" />
             <ComboBox fx:id="idMatricula" layoutX="220.0" layoutY="87.0" prefWidth="150.0" />

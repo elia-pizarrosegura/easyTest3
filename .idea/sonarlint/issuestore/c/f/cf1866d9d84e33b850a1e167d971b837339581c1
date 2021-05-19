@@ -1,0 +1,44 @@
+
+[	java:S106"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8·ÿ‰˜/
+K
+java:S1604‹"(Make this anonymous inner class a lambda(õ²ğñûÿÿÿÿ8…Ç‡Š˜/
+[	java:S106Ï"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8¶¶Œ˜/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+K
+java:S1604Ì"(Make this anonymous inner class a lambda(¥˜åûúÿÿÿÿ8¶¶Œ˜/
+`
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8“·‰˜/
+E
+java:S1604~"(Make this anonymous inner class a lambda(¢ĞÁØ8·ÿ‰˜/
+F
+java:S1604¥"(Make this anonymous inner class a lambda(­¾½8¾ñˆŒ˜/
+[	java:S106Â"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8ş¨Œ˜/
+[	java:S106"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8…Ç‡Š˜/
+[	java:S106µ"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8Âï‹Œ˜/
+}
+java:S1192t"[Define a constant instead of duplicating this literal "Ha cambiado la seleccion:" 10 times.(Üï˜½ûÿÿÿÿ8…Ç‡Š˜/
+[	java:S106Ü"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8Ê’Œ˜/
+F
+java:S1604˜"(Make this anonymous inner class a lambda(ŒÛæÍ8êò‰Š˜/
+K
+java:S1604²"(Make this anonymous inner class a lambda(µü—•ÿÿÿÿÿ8Âï‹Œ˜/
+Z
+java:S1128"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8“·‰˜/
+V	java:S106ù"9Replace this use of System.out or System.err by a logger.(×ì¤”8ü¨±‚˜/
+t
+java:S3776k"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8êò‰Š˜/
+K
+java:S1604æ"(Make this anonymous inner class a lambda(¯×åÁûÿÿÿÿ8†••Œ˜/
+[	java:S106¨"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8¾ñˆŒ˜/
+Z	java:S106t"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8ÛïĞ‰˜/
+[	java:S106é"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8†••Œ˜/
+¤
+java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Üù¢ñøÿÿÿÿ8ååÖ‚˜/
+V	java:S106€"9Replace this use of System.out or System.err by a logger.(ñŒúÏ8ëØÒ‚˜/
+E
+java:S1604q"(Make this anonymous inner class a lambda(Š­·©8Ñùá…˜/
+[	java:S106›"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8êò‰Š˜/
+K
+java:S1604¿"(Make this anonymous inner class a lambda(¬«±ıÿÿÿÿ8ş¨Œ˜/
+K
+java:S1604Ù"(Make this anonymous inner class a lambda(™¬ÍÄşÿÿÿÿ8Ê’Œ˜/

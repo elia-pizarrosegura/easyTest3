@@ -1,0 +1,34 @@
+
+U	java:S106""9Replace this use of System.out or System.err by a logger.(ãÚ¦Ç8Æ¸ÒÛ—/
+U	java:S106<"9Replace this use of System.out or System.err by a logger.(‰¸†8×¶Şˆ˜/
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ı ÕÛ—/
+c
+java:S1192P"FDefine a constant instead of duplicating this literal "Marca" 4 times.(Ğç8±ç·ı—/
+q
+java:S2095_"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8°ç·ı—/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Ÿ¨€
+U	java:S106"9Replace this use of System.out or System.err by a logger.(—Û§½8â‚ÉÚ—/
+q
+java:S2095,"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕõŸşÿÿÿÿ8®…Øˆ˜/
+U	java:S106D"9Replace this use of System.out or System.err by a logger.(Ğå„¬8‡œ‰˜/
+q
+java:S2095B"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8‡œ‰˜/
+q
+java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8®…Øˆ˜/
+Z	java:S106X"9Replace this use of System.out or System.err by a logger.(ùæşëüÿÿÿÿ8£…Šı—/
+q
+java:S2095M"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8¿úü—/
+U	java:S106P"9Replace this use of System.out or System.err by a logger.(Ğç8­š’ı—/
+U	java:S106b"9Replace this use of System.out or System.err by a logger.(Ğç8±ç·ı—/
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(íåÓƒÿÿÿÿÿ8Î­ìˆ˜/
+o
+java:S2259u"MA "NullPointerException" could be thrown; "tiposCilindrada" is nullable here.(ñùªúşÿÿÿÿ8ÂŸÂŞ—/
+m
+java:S1192R"KDefine a constant instead of duplicating this literal "Cilindrada" 3 times.(ŠïÓùÿÿÿÿ8±ç·ı—/
+q
+java:S2095r"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ÔºŞ—/
+U	java:S106j"9Replace this use of System.out or System.err by a logger.(‚çÔ„8±ç·ı—/
+O
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8â‚ÉÚ—/
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Ê†ÀÎûÿÿÿÿ8Æ¸ÒÛ—/

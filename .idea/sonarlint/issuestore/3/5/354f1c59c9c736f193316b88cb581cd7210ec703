@@ -1,13 +1,18 @@
 
-U	java:S106="9Replace this use of System.out or System.err by a logger.(¥µ¬Š8ØÖ¬¯—/
-Z	java:S106`"9Replace this use of System.out or System.err by a logger.(¤ü÷€şÿÿÿÿ8ƒÓ°—/
-Z	java:S106b"9Replace this use of System.out or System.err by a logger.(ğİøıÿÿÿÿ8¾°‰´—/
-U	java:S106e"9Replace this use of System.out or System.err by a logger.(î§ë’8¨ŒŠ´—/
+T	java:S106K"9Replace this use of System.out or System.err by a logger.(˜­±/8ğâÛ¯—/
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+X	java:S125!"<This block of commented-out lines of code should be removed.(Ùø“8ÚÎàˆ˜/
+X	java:S125"<This block of commented-out lines of code should be removed.(Æ¥î‰8ÚÎàˆ˜/
+U	java:S106w"9Replace this use of System.out or System.err by a logger.(üçç8êÀÎ°—/
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(œåñû8„¥˜ˆ˜/
+Z	java:S106l"9Replace this use of System.out or System.err by a logger.(¤ü÷€şÿÿÿÿ8ƒÓ°—/
 W
-java:S1128	";Remove this unused import 'javafx.application.Application'.(í™şj8¼–­¹—/
-T	java:S106F"9Replace this use of System.out or System.err by a logger.(˜­±/8ğâÛ¯—/
-H
-java:S1602L",Remove useless curly braces around statement(—ºè8Àü“´—/
-U	java:S106i"9Replace this use of System.out or System.err by a logger.(ó†À¤8µŸ‹´—/
-U	java:S106k"9Replace this use of System.out or System.err by a logger.(üçç8êÀÎ°—/
+java:S1128";Remove this unused import 'javafx.application.Application'.(í™şj8¼–­¹—/
+]	java:S125%"<This block of commented-out lines of code should be removed.(€Ûñ§úÿÿÿÿ8üâáˆ˜/
+U	java:S106R"9Replace this use of System.out or System.err by a logger.(ç¹ï8ù¦”ˆ˜/
+Z	java:S106n"9Replace this use of System.out or System.err by a logger.(ğİøıÿÿÿÿ8¾°‰´—/
+U	java:S106A"9Replace this use of System.out or System.err by a logger.(¥µ¬Š8ØÖ¬¯—/
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(ó†À¤8µŸ‹´—/
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ğ„‡ûÿÿÿÿ8ÎõÖ†˜/
+U	java:S106q"9Replace this use of System.out or System.err by a logger.(î§ë’8¨ŒŠ´—/
+^	java:S125ˆ"<This block of commented-out lines of code should be removed.(¡€ö·şÿÿÿÿ8‚Šãˆ˜/

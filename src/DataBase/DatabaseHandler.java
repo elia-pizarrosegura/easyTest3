@@ -71,6 +71,24 @@ public class DatabaseHandler extends Config {
 
     }
 
+    public void insertarDatosGenerales(int lineaInserción,String momentoCompra, String leHago, String duerme,String usoHabitual, String situacionPersonal, String situacionProfesional,
+                                       String sexo, String carne, Boolean seguroAnterior, Boolean otroConductor, LocalDate fechaInicio, LocalDate fechacarne, LocalDate fechaNacimiento) throws SQLException, ClassNotFoundException {
+
+        String query= String.format("UPDATE easyTest.DataTestObject SET "+
+                "momentoCompra = '%s',leHago = '%s',duerme = '%s',usoHabitual = '%s',situacionPersonal='%s',situacionProfesional = '%s',carne = '%s',sexo='%s',seguroAnterior=%s,\n" +
+                "otroConductor = %s,fechaInicio = '%s',fechaCarne = '%s',edadConductor = '%s'WHERE id_producto='%s'",
+                momentoCompra,leHago,duerme,usoHabitual,situacionPersonal,situacionProfesional,sexo,carne,seguroAnterior,otroConductor,fechaInicio,fechacarne,fechaNacimiento,lineaInserción);
+
+        PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+        preparedStatement.executeUpdate();
+        
+        System.out.println("Se ha realizado la inserción en línea "+ lineaInserción+ "de los siguientes datos: "+
+                "momento de la compra:"+momentoCompra+" al año le hago:"+leHago+ " duerme en:"+duerme+ " usoHabitual:"+usoHabitual+
+                " situacion Personal:"+ situacionPersonal+ " situacion Profesional:" +situacionProfesional+ " sexo: "+sexo+ " tipo Carne"+ carne+
+                " seguro anterior" +seguroAnterior + " otros conductores"+ otroConductor+ " fecha Inicio seguro: "+ fechaInicio+
+                " fecha de carne:"+ fechacarne+" fecha de nacimiento:"+fechaNacimiento);
+    }
+
     public List<MotoVersion> getMotoVersionData() throws SQLException, ClassNotFoundException {
         List<MotoVersion> list = new ArrayList<>();
         String query = "SELECT * FROM easyTest.MotoVersion";
