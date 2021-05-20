@@ -16,23 +16,23 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class logInController {
+                public class logInController {
 
-    @FXML
-    private Button idLogIn;
+                    @FXML
+                    private Button idLogIn;
 
-    @FXML
-    private PasswordField idPass;
+                    @FXML
+                    private PasswordField idPass;
 
-    @FXML
-    private TextField idUser;
+                    @FXML
+                    private TextField idUser;
 
-    @FXML
-    void initialize() {
+                    @FXML
+                    void initialize() {
 
-        idLogIn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
+                        idLogIn.setOnAction(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent actionEvent) {
                 try {
                     logIn();
                 } catch (IOException e) {
@@ -68,6 +68,7 @@ public class logInController {
             Parent root = FXMLLoader.load(getClass().getResource("../View/main.fxml"));
             mainWindows.setTitle("easyTest");
             mainWindows.setScene(new Scene(root, 877, 569));
+
             mainWindows.show();
 
         }
