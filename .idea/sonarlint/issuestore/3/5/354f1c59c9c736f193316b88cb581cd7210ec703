@@ -1,18 +1,18 @@
 
-T	java:S106K"9Replace this use of System.out or System.err by a logger.(˜­±/8ðâÛ¯—/
+U	java:S106q"9Replace this use of System.out or System.err by a logger.(î§ë’8¨ŒŠ´—/
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
-X	java:S125!"<This block of commented-out lines of code should be removed.(Ùø“8ÚÎàˆ˜/
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ð„‡ûÿÿÿÿ8ÎõÖ†˜/
+]	java:S125%"<This block of commented-out lines of code should be removed.(€Ûñ§úÿÿÿÿ8üâáˆ˜/
 X	java:S125"<This block of commented-out lines of code should be removed.(Æ¥î‰8ÚÎàˆ˜/
-U	java:S106w"9Replace this use of System.out or System.err by a logger.(üççž8êÀÎ°—/
-U	java:S106S"9Replace this use of System.out or System.err by a logger.(œåñû8„¥˜ˆ˜/
+U	java:S106A"9Replace this use of System.out or System.err by a logger.(¥µ¬Š8ØÖ¬¯—/
+T	java:S106K"9Replace this use of System.out or System.err by a logger.(˜­±/8ðâÛ¯—/
 Z	java:S106l"9Replace this use of System.out or System.err by a logger.(¤ü÷€þÿÿÿÿ8žƒÓ°—/
 W
 java:S1128";Remove this unused import 'javafx.application.Application'.(í™þj8¼–­¹—/
-]	java:S125%"<This block of commented-out lines of code should be removed.(€Ûñ§úÿÿÿÿ8üâáˆ˜/
-U	java:S106R"9Replace this use of System.out or System.err by a logger.(ç¹ï8ù¦”ˆ˜/
-Z	java:S106n"9Replace this use of System.out or System.err by a logger.(ðÝøýÿÿÿÿ8¾°‰´—/
-U	java:S106A"9Replace this use of System.out or System.err by a logger.(¥µ¬Š8ØÖ¬¯—/
+U	java:S106S"9Replace this use of System.out or System.err by a logger.(œåñû8„¥˜ˆ˜/
 U	java:S106u"9Replace this use of System.out or System.err by a logger.(ó†À¤8µŸ‹´—/
-Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ð„‡ûÿÿÿÿ8ÎõÖ†˜/
-U	java:S106q"9Replace this use of System.out or System.err by a logger.(î§ë’8¨ŒŠ´—/
+X	java:S125!"<This block of commented-out lines of code should be removed.(Ùø“8ÚÎàˆ˜/
+U	java:S106w"9Replace this use of System.out or System.err by a logger.(üççž8êÀÎ°—/
+Z	java:S106n"9Replace this use of System.out or System.err by a logger.(ðÝøýÿÿÿÿ8¾°‰´—/
 ^	java:S125ˆ"<This block of commented-out lines of code should be removed.(¡€ö·þÿÿÿÿ8‚Šãˆ˜/
+U	java:S106R"9Replace this use of System.out or System.err by a logger.(ç¹ï8ù¦”ˆ˜/
