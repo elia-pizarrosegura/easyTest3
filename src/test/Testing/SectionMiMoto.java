@@ -11,18 +11,13 @@ public class SectionMiMoto {
         this.driver=driver;
     }
 
-    public void introducirMatricula(String option) throws InterruptedException {
+    public void introducirMatricula(Boolean matricula) throws InterruptedException {
 
         new Helper(driver).handleCookieComplianceDialog();
 
-        switch (option) {
-            case "no conozco":
-                driver.findElement(By.cssSelector("a[data-layer-click='{\"concoceMatricula\":\"N\"}']")).click();
-                break;
-            case "rematriculada":
-                driver.findElement(By.cssSelector("a[data-layer-click='{\"tipoMatricula\":\"OTROTIPO\"}']")).click();
-                break;
-            default:
+        if(matricula) {
+            driver.findElement(By.cssSelector("a[data-layer-click='{\"concoceMatricula\":\"N\"}']")).click();
+        }else{
                 System.out.println("No se ha seleccionado ninguna opción de matrícula válida.");
         }
         new Helper(driver).waitSpinner();

@@ -18,14 +18,13 @@ public class SeleniumMain {
     }*/
 
 
-
     public static void main(String[] args) throws InterruptedException {
-    //public static void initFirefoxDriver(){
+        //public static void initFirefoxDriver(){
 
 
-        System.setProperty("webdriver.gecko.driver","/Users/pizarroelia/Documents/Drivers/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/Users/pizarroelia/Documents/Drivers/geckodriver");
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-        capabilities.setCapability("marionette",true);
+        capabilities.setCapability("marionette", true);
 
         FirefoxOptions options = new FirefoxOptions(capabilities);
         options.setAcceptInsecureCerts(false);
@@ -33,26 +32,21 @@ public class SeleniumMain {
 
         WebDriver driver = new FirefoxDriver(options);
 
-        String baseURL="http://10.231.57.202/";
+        String baseURL = "http://10.231.57.202/";
         driver.get(baseURL);
 
-        Steps steps= new Steps(driver);
+        Steps steps = new Steps(driver);
 
 
         //Test
         //Traer objeto BBDD
         steps.stepSeleccionarProducto("Moto");
-        List<String> pasos= steps.seleccionarCamino("Moto");
-        int paso= pasos.size();
-        for(String pasitos: pasos){
-            steps.
-        }
-        steps.stepSeleccionarOpcionMatricula("no conozco");
+        steps.seleccionarCamino("Moto", testDataObject);
+        steps.seleccionarPasosGenerales();
 
 
     }
 
 
-
-    }
+}
 
