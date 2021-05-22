@@ -1,7 +1,0 @@
-
-]	java:S125
-"<This block of commented-out lines of code should be removed.(İó©Ëıÿÿÿÿ8»³ã±˜/
-X	java:S125"<This block of commented-out lines of code should be removed.(üİƒ8Ú¸â±˜/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸ÀŠõúÿÿÿÿ
-“
-java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78éÖˆ²˜/

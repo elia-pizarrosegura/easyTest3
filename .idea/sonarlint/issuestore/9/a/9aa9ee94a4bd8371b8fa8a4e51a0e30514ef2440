@@ -1,0 +1,9 @@
+
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(°Äþ•úÿÿÿÿ8‡öÀß˜/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï•—žøÿÿÿÿ
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(ø¦¼íûÿÿÿÿ8ú¦’ß˜/
+T	java:S106&"9Replace this use of System.out or System.err by a logger.(¡ÓÃ8ú¦’ß˜/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ñ†úÓ8ú¦’ß˜/
+I
+java:S1128"'Remove this unused import 'test.Steps'.(ÆÀø˜üÿÿÿÿ8ˆªÕß˜/

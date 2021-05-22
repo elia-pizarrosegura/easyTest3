@@ -1,0 +1,13 @@
+
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(„»ªìûÿÿÿÿ8’‰ÇŞ˜/
+P
+java:S1128"3Remove this unused import 'org.openqa.selenium.By'.(ÿŠŞ›8  ß˜/
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Çşà˜/
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8£²½à˜/
+h
+java:S1128"FRemove this unused import 'org.openqa.selenium.firefox.FirefoxDriver'.(Úª ÿÿÿÿÿ8øÓËŞ˜/
+X	java:S125"<This block of commented-out lines of code should be removed.(š¾‡Ô8¼Œøà˜/

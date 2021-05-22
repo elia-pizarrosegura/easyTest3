@@ -1,0 +1,10 @@
+
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8šš»à˜/
+]	java:S125"<This block of commented-out lines of code should be removed.(İó©Ëıÿÿÿÿ8»³ã±˜/
+P
+java:S1128"4Remove this unused import 'org.apache.log4j.Logger'.(ñè½8ş§÷İ˜/
+Z
+java:S1128"8Remove this unused import 'org.apache.log4j.LogManager'.(Øê˜Ìüÿÿÿÿ8ş§÷İ˜/
+X	java:S125"<This block of commented-out lines of code should be removed.(üİƒ8Ú¸â±˜/
+]	java:S125,"<This block of commented-out lines of code should be removed.(üòËäøÿÿÿÿ8Ù¹÷à˜/

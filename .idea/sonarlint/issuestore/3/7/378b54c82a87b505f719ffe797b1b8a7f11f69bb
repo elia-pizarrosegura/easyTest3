@@ -1,0 +1,7 @@
+
+m
+java:S13010"KReplace this "switch" statement by "if" statements to increase readability.(Ú¾¤êøÿÿÿÿ8…¦ÿß˜/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï•—žøÿÿÿÿ
+
+java:S2273#"cMove this call to "wait()" into a synchronized block to be sure the monitor on "WebDriver" is held.(Á¨æS8§…Ûß˜/
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ø…Œ¸úÿÿÿÿ8µ·ˆà˜/

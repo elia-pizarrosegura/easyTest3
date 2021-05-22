@@ -1,11 +1,4 @@
 
-Z
-java:S1128"=Remove this unused import 'javafx.collections.FXCollections'.(´¶²Æ8ƒÀ°˜/
+X	java:S125"<This block of commented-out lines of code should be removed.(½‘Ñ³8¥ å±˜/
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
-`
-java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8ş¼°˜/
-X	java:S125!"<This block of commented-out lines of code should be removed.(½‘Ñ³8¥ å±˜/
-]	java:S125*"<This block of commented-out lines of code should be removed.(ƒ¹éÿÿÿÿÿ8™¥ä°˜/
-O
-java:S1128
-"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8†–Â°˜/
+]	java:S125&"<This block of commented-out lines of code should be removed.(ƒ¹éÿÿÿÿÿ8™¥ä°˜/
