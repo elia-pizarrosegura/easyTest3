@@ -312,14 +312,17 @@ public class General {
         idSoloFines.setToggleGroup(usoHabitual);
         idSoloFines.setSelected(true);
         dt1.setUsoHabitual("fines");
+
         idCasado.setToggleGroup(situacionPersonal);
         idCasado.setSelected(true);
         dt1.setSituacionPersonal("casado");
         idParejaHecho.setToggleGroup(situacionPersonal);
+
         idAdministrativo.setToggleGroup(situacionProfesional);
         idAdministrativo.setSelected(true);
         dt1.setSituacionProfesional("administrativo");
         idAutonomo.setToggleGroup(situacionProfesional);
+
         idHombre.setToggleGroup(sexo);
         idHombre.setSelected(true);
         dt1.setSexo("hombre");
@@ -344,7 +347,7 @@ public class General {
     public void insercionBBDD(){
         try {
             new DatabaseHandler().insertarDatosGenerales(new DatabaseHandler().consultaIndiceDataTestObject(),
-                    dt1.getMomentoCompra(),dt1.getLeHago(),dt1.getDuerme(),dt1.getUsoHabitual(),dt1.getSituacionPersonal(),dt1.getSituacionPersonal(),
+                    dt1.getMomentoCompra(),dt1.getLeHago(),dt1.getDuerme(),dt1.getUsoHabitual(),dt1.getSituacionPersonal(),dt1.getSituacionProfesional(),
             dt1.getSexo(),dt1.getCarne(),dt1.isSeguroAnterior(),dt1.isOtroConductor(),dt1.getFechaInicio(),
                     dt1.getFechaCarne(),dt1.getFechaNacimiento());
         } catch (SQLException throwables) {
