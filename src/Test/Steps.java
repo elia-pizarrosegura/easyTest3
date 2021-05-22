@@ -1,14 +1,8 @@
-package test;
+package Test;
 
 import Model.DataTestObject;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import test.SeleniumMain;
-import test.Testing.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import Test.Testing.*;
 
 public class Steps{
     WebDriver driver;

@@ -18,6 +18,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -195,7 +196,7 @@ public class MotoUnknownPlate {
         idFechaMatriculac.setEditable(false);
         idFechaMatriculac.setValue(LocalDate.of(2021, Month.JANUARY, 1));
         System.out.println("La fecha por defecto es: 2021-01-01");
-        dt1.setFechaMatriculacion(LocalDate.of(2021, 01, 01));
+        dt1.setFechaMatriculacion(LocalDate.of(2021, 01,01));
     }
 
     public void setMarcaObject() {

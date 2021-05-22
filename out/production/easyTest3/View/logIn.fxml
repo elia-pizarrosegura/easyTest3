@@ -33,7 +33,7 @@
                         <DropShadow />
                      </effect>
                   </PasswordField>
-                  <Button fx:id="idLogIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="test.Log In!" textAlignment="CENTER" textFill="#f8f8f8">
+                  <Button fx:id="idLogIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="Test.Log In!" textAlignment="CENTER" textFill="#f8f8f8">
                      <effect>
                         <DropShadow />
                      </effect>

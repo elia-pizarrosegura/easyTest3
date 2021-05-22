@@ -1,17 +1,14 @@
-package test;
+package Test;
 
 import DataBase.DatabaseHandler;
 import Model.DataTestObject;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.junit.Test;
+import Test.Steps;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.sql.SQLException;
-import java.util.List;
 
 
 public class SeleniumMain {
@@ -42,9 +39,16 @@ public class SeleniumMain {
 
 
         //Test
+
+        //Inserción BBDD
         int ultimaInsercionDataTestObject= new DatabaseHandler().consultaIndiceDataTestObject();
         DataTestObject objectData= new DataTestObject();
         objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
+        System.out.println(objectData.getFechaMatriculacion());
+        System.out.println(objectData.getMomentoCompra());
+        System.out.println(objectData.getFechaCarne());
+        System.out.println(objectData.getFechaInicio());
+        System.out.println(objectData.getFechaNacimiento());
 
 
         steps.stepSeleccionarProducto("Moto");

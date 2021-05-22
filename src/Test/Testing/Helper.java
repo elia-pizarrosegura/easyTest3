@@ -1,4 +1,4 @@
-package test.Testing;
+package Test.Testing;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
