@@ -37,22 +37,14 @@ public class SeleniumMain {
 
         Steps steps = new Steps(driver);
 
-
-        //Test
-
-        //Inserción BBDD
+        //Obtener datos para el test
         int ultimaInsercionDataTestObject= new DatabaseHandler().consultaIndiceDataTestObject();
         DataTestObject objectData= new DataTestObject();
         objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
-        System.out.println(objectData.getFechaMatriculacion());
-        System.out.println(objectData.getMomentoCompra());
-        System.out.println(objectData.getFechaCarne());
-        System.out.println(objectData.getFechaInicio());
-        System.out.println(objectData.getFechaNacimiento());
 
-
-        steps.stepSeleccionarProducto("Moto");
-      //  steps.seleccionarCamino("Moto", testDataObject);
+        //Iniciar test
+        steps.stepSeleccionarProducto(objectData.getProducto());
+        steps.seleccionarCamino(objectData);
        // steps.seleccionarPasosGenerales(testDataObject);
 
 
