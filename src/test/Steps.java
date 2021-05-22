@@ -28,17 +28,17 @@ public class Steps{
         switch("producto"){
             case("Moto"):
                 new SectionMiMoto(driver).introducirMatricula(obj.isMatricula());
-                new SectionMiMoto(driver).seleccionarFechaMatriculacion(obj.getFechaMatriculacion());
+                /*new SectionMiMoto(driver).seleccionarFechaMatriculacion(obj.getFechaMatriculacion());
                 new SectionMiMoto(driver).seleccionarMarca(obj.getMarca());
                 new SectionMiMoto(driver).seleccionarCilindarada(obj.getCilindrada());
                 new SectionMiMoto(driver).seleccionarModelo(obj.getModelo());
                 new SectionMiMoto(driver).seleccionarVersion(obj.getVersion());
-                break;
+                break;*/
             default:
                 System.out.println("No se ha seleccionado camino adecuado.");
         }
 
-    }
+    }/*
 
     public void seleccionarPasosGenerales(DataTestObject obj){
         new SectionMiMoto(driver).seleccionarMomentoCompra(obj.getMomentoCompra());
@@ -60,7 +60,7 @@ public class Steps{
         new SectionMiSeguro(driver).rellenarFechaInicio(obj.getFechaInicio());
         new SectionMiSeguro(driver).comprobarPantallaPresupuesto();
 
-    }
+    }*/
 
 
 

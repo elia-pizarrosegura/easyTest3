@@ -1,5 +1,7 @@
 package test;
 
+import DataBase.DatabaseHandler;
+import Model.DataTestObject;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -8,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -18,7 +21,7 @@ public class SeleniumMain {
     }*/
 
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
         //public static void initFirefoxDriver(){
 
 
@@ -39,10 +42,14 @@ public class SeleniumMain {
 
 
         //Test
-        //Traer objeto BBDD
+        int ultimaInsercionDataTestObject= new DatabaseHandler().consultaIndiceDataTestObject();
+        DataTestObject objectData= new DataTestObject();
+        objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
+
+
         steps.stepSeleccionarProducto("Moto");
-        steps.seleccionarCamino("Moto", testDataObject);
-        steps.seleccionarPasosGenerales();
+      //  steps.seleccionarCamino("Moto", testDataObject);
+       // steps.seleccionarPasosGenerales(testDataObject);
 
 
     }

@@ -1,5 +1,6 @@
 package DataBase;
 
+import Model.DataTestObject;
 import Model.LogInClass;
 import Model.MotoVersion;
 
@@ -88,6 +89,42 @@ public class DatabaseHandler extends Config {
                 " seguro anterior" +seguroAnterior + " otros conductores"+ otroConductor+ " fecha Inicio seguro: "+ fechaInicio+
                 " fecha de carne:"+ fechacarne+" fecha de nacimiento:"+fechaNacimiento);
     }
+
+    public DataTestObject obtenerDatosTestObject(int lineaInserción) throws SQLException, ClassNotFoundException {
+
+        String query= String.format("SELECT *  FROM easyTest.DataTestObject WHERE id_producto=%s",lineaInserción);
+        DataTestObject object= new DataTestObject();
+
+        PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+        ResultSet resultSet1 = preparedStatement.executeQuery();
+        while (resultSet1.next()) {
+            object.setProducto(resultSet1.getString("producto"));
+            object.setMatricula(resultSet1.getBoolean("matricula"));
+            object.setFechaMatriculacion(LocalDate.parse(resultSet1.getString("fechaMatriculacion")));
+            object.setMarca(resultSet1.getString("marca"));
+            object.setCilindrada(resultSet1.getString("cilindrada"));
+            object.setModelo(resultSet1.getString("modelo"));
+            object.setVersion(resultSet1.getString("version"));
+            object.setAnyo(resultSet1.getString("anyo"));
+            object.setMomentoCompra(resultSet1.getString("momentoCompra"));
+            object.setLeHago(resultSet1.getString("leHago"));
+            object.setDuerme(resultSet1.getString("duerme"));
+            object.setUsoHabitual(resultSet1.getString("usoHabitual"));
+            object.setSituacionPersonal(resultSet1.getString("situacionPersonal"));
+            object.setSituacionProfesional(resultSet1.getString("situacionProfesional"));
+            object.setSexo(resultSet1.getString("sexo"));
+            object.setCarne(resultSet1.getString("carne"));
+            object.setSeguroAnterior(resultSet1.getBoolean("seguroAnterior"));
+            object.setOtroConductor(resultSet1.getBoolean("otroConductor"));
+            object.setFechaInicio(LocalDate.parse(resultSet1.getString("fechaInicio")));
+            object.setFechaCarne(LocalDate.parse(resultSet1.getString("fechaCarne")));
+            object.setFechaNacimiento(LocalDate.parse(resultSet1.getString("edadConductor")));
+
+        }
+
+        return object;
+    }
+
 
     public List<MotoVersion> getMotoVersionData() throws SQLException, ClassNotFoundException {
         List<MotoVersion> list = new ArrayList<>();
