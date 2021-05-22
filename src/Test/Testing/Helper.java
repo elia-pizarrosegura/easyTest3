@@ -32,7 +32,7 @@ public class Helper {
         int i = 0;
         while (i < 90) {
             if (driver.findElement(By.cssSelector(".backprocess")).isDisplayed()) {
-                driver.wait(2000);
+                Thread.sleep(2000);
                 i++;
             } else {
                 break;
