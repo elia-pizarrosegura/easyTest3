@@ -292,7 +292,7 @@ public class General {
         idFechaNacimiento.setEditable(false);
         idFechaNacimiento.setValue(LocalDate.of(1984, Month.JANUARY, 1));
         System.out.println("La fecha por defecto es:" + LocalDate.of(1984, Month.JANUARY, 1));
-        dt1.setFechaNacimiento(LocalDate.of(2015, Month.JANUARY, 1));
+        dt1.setFechaNacimiento(LocalDate.of(1984, Month.JANUARY, 1));
     }
 
     public void iniciarRadioButtons(){
@@ -310,6 +310,7 @@ public class General {
         idGarajeColectivo.setToggleGroup(duerme);
         idGarajeColectivo.setSelected(true);
         dt1.setDuerme("garaje");
+
         idDiarioFindes.setToggleGroup(usoHabitual);
         idSoloFines.setToggleGroup(usoHabitual);
         idSoloFines.setSelected(true);
@@ -329,6 +330,7 @@ public class General {
         idHombre.setSelected(true);
         dt1.setSexo("hombre");
         idMujer.setToggleGroup(sexo);
+
         idA.setToggleGroup(tipoCarne);
         idB.setToggleGroup(tipoCarne);
         idB.setSelected(true);

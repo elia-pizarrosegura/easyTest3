@@ -77,9 +77,10 @@ public class DatabaseHandler extends Config {
                                        String sexo, String carne, Boolean seguroAnterior, Boolean otroConductor, LocalDate fechaInicio, LocalDate fechacarne, LocalDate fechaNacimiento) throws SQLException, ClassNotFoundException {
 
         String query= String.format("UPDATE easyTest.DataTestObject SET "+
-                "momentoCompra = '%s',leHago = '%s',duerme = '%s',usoHabitual = '%s',situacionPersonal='%s',situacionProfesional = '%s',carne = '%s',sexo='%s',seguroAnterior=%s,\n" +
+                "momentoCompra = '%s',leHago = '%s',duerme = '%s',usoHabitual = '%s',situacionPersonal='%s',situacionProfesional = '%s',sexo = '%s',carne='%s',seguroAnterior=%s,\n" +
                 "otroConductor = %s,fechaInicio = '%s',fechaCarne = '%s',edadConductor = '%s'WHERE id_producto='%s'",
-                momentoCompra,leHago,duerme,usoHabitual,situacionPersonal,situacionProfesional,sexo,carne,seguroAnterior,otroConductor,fechaInicio,fechacarne,fechaNacimiento,lineaInserción);
+                momentoCompra,leHago,duerme,usoHabitual,situacionPersonal,situacionProfesional,sexo,carne,seguroAnterior,
+                otroConductor,fechaInicio,fechacarne,fechaNacimiento,lineaInserción);
 
         PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
         preparedStatement.executeUpdate();

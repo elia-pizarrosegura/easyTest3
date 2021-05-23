@@ -47,13 +47,14 @@ public class Steps {
         pg.rellenarSituacionPersonal(obj.getSituacionPersonal());
         pg.rellenarSituacionProfesional(obj.getSituacionProfesional());
         pg.seleccionarFechaNacimiento(obj.getFechaNacimiento());
-        pg.rellenarSexo(obj.getSexo());/*
-        new SectionConductor(driver).seleccionarTipoCarne(obj.getCarne());
-        new SectionConductor(driver).seleccionarPaisProcedencia();
-        new SectionConductor(driver).seleccionarSiConduceOtro(obj.isOtroConductor());
-        new SectionConductor(driver).seleccionarSiSeguroAnterior(obj.isSeguroAnterior());
-        new SectionConductor(driver).rellenarDatosContacto();
-        new SectionMiSeguro(driver).rellenarFechaInicio(obj.getFechaInicio());
+        pg.rellenarSexo(obj.getSexo());
+        pg.seleccionarTipoCarne(obj.getCarne());
+        pg.seleccionarPaisProcedencia();
+        pg.seleccionarAnyoCarneConducir(obj.getFechaCarne());
+        pg.seleccionarSiConduceOtro(obj.isOtroConductor());
+        pg.seleccionarSiSeguroAnterior(obj.isSeguroAnterior());
+        pg.rellenarDatosContacto();
+        pg.rellenarFechaInicio(obj.getFechaInicio());/*
         new SectionMiSeguro(driver).comprobarPantallaPresupuesto();
 */
     }
