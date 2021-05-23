@@ -159,10 +159,10 @@ public class General {
             public void changed(ObservableValue<? extends Toggle> observableValue, Toggle toggle, Toggle t1) {
                 System.out.println("Ha cambiado la seleccion:" +((RadioButton) compraMotoGroup.getSelectedToggle()).getText());
                 if(idHasta1000.isSelected()) {
-                    dt1.setLeHago("hasta1000");
+                    dt1.setLeHago("hasta 1000");
                 }
                 if(idHasta2000.isSelected()) {
-                    dt1.setLeHago("hasta2000");
+                    dt1.setLeHago("hasta 2000");
                 }
             }
         });
@@ -300,10 +300,12 @@ public class General {
         idNoComprado1.setSelected(true);
         dt1.setMomentoCompra("no comprado");
         idMenos3meses1.setToggleGroup(compraMotoGroup);
+
         idHasta1000.setToggleGroup(alAnyoHago);
         idHasta1000.setSelected(true);
         dt1.setLeHago("hasta 1000");
         idHasta2000.setToggleGroup(alAnyoHago);
+
         idEnCalle.setToggleGroup(duerme);
         idGarajeColectivo.setToggleGroup(duerme);
         idGarajeColectivo.setSelected(true);

@@ -1,0 +1,7 @@
+
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(ø…Œ¸úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
+f
+java:S13010"KReplace this "switch" statement by "if" statements to increase readability.(Ú¾¤êøÿÿÿÿ
+F
+java:S5960*"+Remove this assertion from production code.(•ò­´úÿÿÿÿ

@@ -1,0 +1,9 @@
+
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(Ë¼Ïùÿÿÿÿ8ò†‚¬™/
+X	java:S125"<This block of commented-out lines of code should be removed.(üİƒ8Ú¸â±˜/
+]	java:S125"<This block of commented-out lines of code should be removed.(İó©Ëıÿÿÿÿ8»³ã±˜/
+`
+java:S1854*">Remove this useless assignment to local variable "objectData".(–€¢Ìøÿÿÿÿ8ÜÎÒ«™/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±¢™ùÿÿÿÿ8ò†‚¬™/
+]	java:S1250"<This block of commented-out lines of code should be removed.(¿æÙıÿÿÿÿ8˜¸İÎ™/

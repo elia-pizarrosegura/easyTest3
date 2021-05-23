@@ -1,44 +1,44 @@
 
-K
-java:S1604ª"(Make this anonymous inner class a lambda(õ²ğñûÿÿÿÿ8•È±¨˜/
-t
-java:S3776r"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8êò‰Š˜/
-[	java:S106á"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-w
-java:S1192˜"YDefine a constant instead of duplicating this literal "La fecha por defecto es:" 3 times.(×ì¤”8•È±¨˜/
-V	java:S106˜"9Replace this use of System.out or System.err by a logger.(×ì¤”8•È±¨˜/
-U	java:S106|"9Replace this use of System.out or System.err by a logger.(Â¿³¨8˜ª¯¨˜/
-V	java:S106‚"9Replace this use of System.out or System.err by a logger.(íÔ€Ç8­õ±¨˜/
-[	java:S106Ç"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-[	java:S106î"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-V	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(­´êæ8­õ±¨˜/
-[	java:S106­"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-V	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ñŒúÏ8•È±¨˜/
-[	java:S106û"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-F
-java:S1604"(Make this anonymous inner class a lambda(¢ĞÁØ8•È±¨˜/
 F
 java:S1604"(Make this anonymous inner class a lambda(Š­·©8•È±¨˜/
-V	java:S106¦"9Replace this use of System.out or System.err by a logger.(ÌŸ¬ö8•È±¨˜/
-K
-java:S1604Ş"(Make this anonymous inner class a lambda(¬«±ıÿÿÿÿ8•È±¨˜/
-[	java:S106“"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-[	java:S106º"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-[	java:S106Ô"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-~
-java:S1192“"[Define a constant instead of duplicating this literal "Ha cambiado la seleccion:" 10 times.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
-K
-java:S1604Ñ"(Make this anonymous inner class a lambda(µü—•ÿÿÿÿÿ8•È±¨˜/
-[	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-K
-java:S1604ø"(Make this anonymous inner class a lambda(™¬ÍÄşÿÿÿÿ8•È±¨˜/
-[	java:S106 "9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
-K
-java:S1604…"(Make this anonymous inner class a lambda(¯×åÁûÿÿÿÿ8•È±¨˜/
 F
 java:S1604·"(Make this anonymous inner class a lambda(ŒÛæÍ8•È±¨˜/
+[	java:S106º"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+w
+java:S1192˜"YDefine a constant instead of duplicating this literal "La fecha por defecto es:" 3 times.(×ì¤”8•È±¨˜/
 F
 java:S1604Ä"(Make this anonymous inner class a lambda(­¾½8•È±¨˜/
+~
+java:S1192“"[Define a constant instead of duplicating this literal "Ha cambiado la seleccion:" 10 times.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+t
+java:S3776r"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8êò‰Š˜/
+K
+java:S1604ø"(Make this anonymous inner class a lambda(™¬ÍÄşÿÿÿÿ8•È±¨˜/
+U	java:S106|"9Replace this use of System.out or System.err by a logger.(Â¿³¨8˜ª¯¨˜/
+V	java:S106˜"9Replace this use of System.out or System.err by a logger.(×ì¤”8•È±¨˜/
 K
 java:S1604ë"(Make this anonymous inner class a lambda(¥˜åûúÿÿÿÿ8•È±¨˜/
+[	java:S106û"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+[	java:S106­"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604…"(Make this anonymous inner class a lambda(¯×åÁûÿÿÿÿ8•È±¨˜/
+K
+java:S1604Ñ"(Make this anonymous inner class a lambda(µü—•ÿÿÿÿÿ8•È±¨˜/
+F
+java:S1604"(Make this anonymous inner class a lambda(¢ĞÁØ8•È±¨˜/
+[	java:S106“"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+[	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+V	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(­´êæ8­õ±¨˜/
+[	java:S106Ô"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(íÔ€Ç8­õ±¨˜/
+[	java:S106î"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604ª"(Make this anonymous inner class a lambda(õ²ğñûÿÿÿÿ8•È±¨˜/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+K
+java:S1604Ş"(Make this anonymous inner class a lambda(¬«±ıÿÿÿÿ8•È±¨˜/
+[	java:S106Ç"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+V	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ñŒúÏ8•È±¨˜/
+V	java:S106¦"9Replace this use of System.out or System.err by a logger.(ÌŸ¬ö8•È±¨˜/
+[	java:S106á"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+[	java:S106 "9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/

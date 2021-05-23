@@ -47,3 +47,13 @@ J
 src/test/SeleniumMain.java,5/c/5c74a6b256a6ba61deb364d363aa6af01678bc6c
 C
 src/test/Steps.java,0/8/08028c3edfae4d7baeffc997bea16f2cb641da52
+N
+src/Test/Testing/HomePage.java,8/a/8a1e2828247e9bace7f013e0a33fb472803e6a29
+J
+src/Test/SeleniumMain.java,7/f/7f22c19fdee61a31b0d28aa55d0c9da84aca081d
+L
+src/Test/Testing/Helper.java,e/a/eaf35e29e086769794966dfa07122ea2c86dedf2
+C
+src/Test/Steps.java,f/b/fb6289368b7e206ea501263fae2fb9d108a6e040
+S
+#src/Test/Testing/SectionMiMoto.java,a/6/a6cd47e7b491bd986b766072c0f0f6211a3c16e3

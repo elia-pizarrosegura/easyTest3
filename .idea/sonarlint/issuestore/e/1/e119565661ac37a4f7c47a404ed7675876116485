@@ -1,39 +1,45 @@
 
-c
-java:S1192b"FDefine a constant instead of duplicating this literal "Marca" 4 times.(Ğç8±ç·ı—/
-p
-java:S2259‡"MA "NullPointerException" could be thrown; "tiposCilindrada" is nullable here.(ñùªúşÿÿÿÿ8ÂŸÂŞ—/
-U	java:S106|"9Replace this use of System.out or System.err by a logger.(‚çÔ„8±ç·ı—/
-m	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ƒ¨8©Ø×©˜/
 q
-java:S2095R"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8’èÙ©˜/
-q
-java:S2095q"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8°ç·ı—/
-q
-java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8®…Øˆ˜/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Ÿ¨€
-U	java:S106"9Replace this use of System.out or System.err by a logger.(—Û§½8â‚ÉÚ—/
-q
-java:S2095,"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕõŸşÿÿÿÿ8®…Øˆ˜/
-q
-java:S2095B"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8‡œ‰˜/
-Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Ê†ÀÎûÿÿÿÿ8Æ¸ÒÛ—/
-U	java:S106<"9Replace this use of System.out or System.err by a logger.(‰¸†8×¶Şˆ˜/
-U	java:S106t"9Replace this use of System.out or System.err by a logger.(Ğç8±ç·ı—/
-U	java:S106b"9Replace this use of System.out or System.err by a logger.(Ğç8­š’ı—/
-U	java:S106""9Replace this use of System.out or System.err by a logger.(ãÚ¦Ç8Æ¸ÒÛ—/
-Z	java:S1061"9Replace this use of System.out or System.err by a logger.(íåÓƒÿÿÿÿÿ8Î­ìˆ˜/
-Y	java:S107J"=Method has 14 parameters, which is greater than 7 authorized.(¬ƒ¨8–÷Æ¨˜/
-Z	java:S106U"9Replace this use of System.out or System.err by a logger.(øÃ¨©ÿÿÿÿÿ8¯è©˜/
-m
-java:S1192d"KDefine a constant instead of duplicating this literal "Cilindrada" 3 times.(ŠïÓùÿÿÿÿ8±ç·ı—/
+java:S2095c"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8§•«™/
 r
-java:S2095„"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ÔºŞ—/
+java:S2095—"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8°ç·ı—/
 q
-java:S2095_"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8¿úü—/
+java:S2095<"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8®…Øˆ˜/
+V	java:S106š"9Replace this use of System.out or System.err by a logger.(Ğç8±ç·ı—/
+m	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ƒ¨8©Ø×©˜/
+q
+java:S2095T"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8’èÙ©˜/
+r
+java:S2095…"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8¿úü—/
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ùæşëüÿÿÿÿ8£…Šı—/
 O
-java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8â‚ÉÚ—/
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8â‚ÉÚ—/
+r
+java:S2095ª"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ÔºŞ—/
+Y	java:S107L"=Method has 14 parameters, which is greater than 7 authorized.(¬ƒ¨8–÷Æ¨˜/
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(íåÓƒÿÿÿÿÿ8Î­ìˆ˜/
+V	java:S106¢"9Replace this use of System.out or System.err by a logger.(‚çÔ„8±ç·ı—/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¹Ÿ¨€
+V	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(Ğç8­š’ı—/
 q
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ı ÕÛ—/
-U	java:S106D"9Replace this use of System.out or System.err by a logger.(Ğå„¬8‡œ‰˜/
-Z	java:S106j"9Replace this use of System.out or System.err by a logger.(ùæşëüÿÿÿÿ8£…Šı—/
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8ı ÕÛ—/
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(øÃ¨©ÿÿÿÿÿ8¯è©˜/
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(ãÚ¦Ç8Æ¸ÒÛ—/
+q
+java:S2095D"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(œîáıÿÿÿÿ8‡œ‰˜/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(—Û§½8â‚ÉÚ—/
+p
+java:S2259­"MA "NullPointerException" could be thrown; "tiposCilindrada" is nullable here.(ñùªúşÿÿÿÿ8ÂŸÂŞ—/
+d
+java:S1192ˆ"FDefine a constant instead of duplicating this literal "Marca" 4 times.(Ğç8±ç·ı—/
+q
+java:S2095."OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÕõŸşÿÿÿÿ8®…Øˆ˜/
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(Ê†ÀÎûÿÿÿÿ8Æ¸ÒÛ—/
+H
+java:S1128
+"+Remove this unused import 'java.util.Date'.(¸…¼ü8íµï¬™/
+n
+java:S1192Š"KDefine a constant instead of duplicating this literal "Cilindrada" 3 times.(ŠïÓùÿÿÿÿ8±ç·ı—/
+U	java:S106>"9Replace this use of System.out or System.err by a logger.(‰¸†8×¶Şˆ˜/
+U	java:S106F"9Replace this use of System.out or System.err by a logger.(Ğå„¬8‡œ‰˜/
+r	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ¡¨‹øÿÿÿÿ8§•«™/

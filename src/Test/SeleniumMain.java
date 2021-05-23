@@ -45,7 +45,7 @@ public class SeleniumMain {
         //Iniciar test
         steps.stepSeleccionarProducto(objectData.getProducto());
         steps.seleccionarCamino(objectData);
-       // steps.seleccionarPasosGenerales(testDataObject);
+        steps.seleccionarPasosGenerales(objectData);
 
 
     }

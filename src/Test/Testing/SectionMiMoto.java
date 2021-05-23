@@ -23,7 +23,7 @@ public class SectionMiMoto {
 
        // new Helper(driver).handleCookieComplianceDialog();
         System.out.println(matricula);
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
 
         if(!matricula) {
@@ -37,26 +37,26 @@ public class SectionMiMoto {
 
     }
 
-    public SectionMiMoto seleccionarFechaMatriculacion(LocalDate date) throws InterruptedException {
-        Thread.sleep(2000);
+    public void seleccionarFechaMatriculacion(LocalDate date) throws InterruptedException {
+        Thread.sleep(3000);
 
         final By monthElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", bikeRegistrationMonth, date.getMonth().getValue()));
         driver.findElement(monthElement).click();
         final By yearElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", bikeRegistrationYear, date.getYear()));
         driver.findElement(yearElement).click();
         System.out.println("Fecha matriculación seleccionada:"+ date);
-        return this;
+
     }
 
     public SectionMiMoto seleccionarMarca(String marca) throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.cssSelector(String.format(marcaBtn, marca))).click();
         System.out.println("Se ha seleccionado la marca:"+ marca);
         return this;
     }
 
     public SectionMiMoto seleccionarCilindarada(String cilindrada) throws InterruptedException{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
         switch (cilindrada) {
             case "1-50":
@@ -78,14 +78,14 @@ public class SectionMiMoto {
     }
 
     public SectionMiMoto seleccionarModelo(String modelo) throws InterruptedException{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath(String.format(marcaOption, modelo))).click();
         System.out.println("Se ha seleccionado el modelo:"+  modelo);
         return this;
     }
 
     public SectionMiMoto seleccionarVersion(String version) throws InterruptedException{
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath(String.format(versionOption, version))).click();
         System.out.println("Se ha seleccionado el modelo:"+  version);
         return this;

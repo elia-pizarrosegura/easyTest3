@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class DataTestObject {
     public String producto;
@@ -201,7 +200,6 @@ public class DataTestObject {
     public void setVersion(String version) {
         this.version = version;
     }
-
 
     public String getProducto() {
         return producto;
