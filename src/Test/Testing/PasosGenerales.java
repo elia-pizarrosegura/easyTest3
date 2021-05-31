@@ -10,6 +10,7 @@ import java.time.LocalDate;
 public class PasosGenerales {
 
     WebDriver driver;
+    Helper helper = new Helper(driver);
     private String selectorAOption = "//a[contains(text(),'%s')]";
     private final By codigoPostalInput = By.cssSelector("#MO_CHAB_POSTAL");
     private final By saltarPreguntaDni = By.cssSelector("a[title='Saltar pregunta']");
@@ -20,15 +21,17 @@ public class PasosGenerales {
     private final By inputTextEmail = By.cssSelector("#MO_TOMA_EMAIL");
     private final By inputTextPhone = By.cssSelector("div>input[id='MO_TOMA_TELEFONO1']");
     private final By buttonContinue = By.cssSelector("#siguiente");
-    private final By politicaPrivacidad= By.cssSelector("#checkPrivacidad");
+    private final By politicaPrivacidad = By.cssSelector("#checkPrivacidad");
     private final By calendarToday = By.cssSelector(".ui-datepicker-today");
+    private final By numeroPresupuestoTxt = By.cssSelector(".tu-presupuesto-valido");
 
     public PasosGenerales(WebDriver driver) {
         this.driver = driver;
     }
 
     public PasosGenerales seleccionarMomentoCompra(String momentoCompra) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         switch (momentoCompra) {
             case ("no comprado"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " No he comprado aún "))).click();
@@ -46,7 +49,8 @@ public class PasosGenerales {
     }
 
     public PasosGenerales seleccionarKmAlAnyo(String leHago) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         switch (leHago) {
             case ("hasta 1000"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " Hasta 1.000 Kilómetros "))).click();
@@ -60,10 +64,12 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado ningún kilometraje al año");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarDondeDuerme(String duerme) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         switch (duerme) {
             case ("calle"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " En la calle "))).click();
@@ -77,16 +83,20 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado lugar donde duerme el vehículo.");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarCP(String cp) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         driver.findElement(codigoPostalInput).sendKeys(cp);
         return this;
+
     }
 
     public PasosGenerales seleccionarUsoHabitual(String uso) throws InterruptedException {
-        Thread.sleep(5000);
+
+        helper.waitSpinner();
         switch (uso) {
             case ("fines"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " Solo fines de semana "))).click();
@@ -100,17 +110,21 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado el uso del vehículo.");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarIdentificacion() throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         driver.findElement(saltarPreguntaDni).click();
         System.out.println("Se ha saltado la introducción de la identificación de usuario");
         return this;
+
     }
 
     public PasosGenerales rellenarSituacionPersonal(String situacionPersonal) throws InterruptedException {
-        Thread.sleep(5000);
+
+        helper.waitSpinner();
         switch (situacionPersonal) {
             case ("casado"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " Casado/a "))).click();
@@ -124,10 +138,12 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado situacion personal.");
         }
         return this;
+
     }
 
     public PasosGenerales rellenarSituacionProfesional(String situacionProfesional) throws InterruptedException {
-        Thread.sleep(5000);
+
+        helper.waitSpinner();
         switch (situacionProfesional) {
             case ("administrativo"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " Administrativo "))).click();
@@ -141,11 +157,12 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado situacion profesional.");
         }
         return this;
+
     }
 
     public void seleccionarFechaNacimiento(LocalDate date) throws InterruptedException {
-        Thread.sleep(3000);
 
+        helper.waitSpinner();
         final By dayElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", birthDateDay, date.getDayOfMonth()));
         driver.findElement(dayElement).click();
         final By monthElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", birthDateMonth, date.getMonth().getValue()));
@@ -160,8 +177,9 @@ public class PasosGenerales {
     }
 
     public PasosGenerales rellenarSexo(String sexo) throws InterruptedException {
-        Thread.sleep(3000);
-        System.out.println("sex0:"+sexo);
+
+        helper.waitSpinner();
+        System.out.println("sex0:" + sexo);
         switch (sexo) {
             case ("hombre"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " Hombre "))).click();
@@ -175,10 +193,12 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado ningún sexo.");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarTipoCarne(String tipoCarne) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         switch (tipoCarne) {
             case ("A"):
                 driver.findElement(By.xpath(String.format(selectorAOption, " A "))).click();
@@ -192,64 +212,84 @@ public class PasosGenerales {
                 System.out.println("No se ha seleccionado ningún tipo de carnet.");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarPaisProcedencia() throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         driver.findElement(By.xpath(String.format(selectorAOption, " ESPAÑA "))).click();
         System.out.println("Se ha seleccionado la opción: carnet Español.");
         return this;
+
     }
 
-    public void seleccionarAnyoCarneConducir(LocalDate date) throws InterruptedException {
-        Thread.sleep(3000);
+    public PasosGenerales seleccionarAnyoCarneConducir(LocalDate date) throws InterruptedException {
 
+        helper.waitSpinner();
         final By yearElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", carneConducir, date.getYear()));
         driver.findElement(yearElement).click();
         System.out.println("Fecha de nacimiento seleccionada:" + date);
-
+        return this;
     }
 
 
     public PasosGenerales seleccionarSiConduceOtro(Boolean otroConductor) throws InterruptedException {
-        Thread.sleep(5000);
-        if(!otroConductor){
+
+        helper.waitSpinner();
+        if (!otroConductor) {
             driver.findElement(By.xpath(String.format(selectorAOption, " No "))).click();
             System.out.println("Se ha seleccionado la opción: no hay otro conductor.");
-        }else{
+        } else {
             driver.findElement(By.xpath(String.format(selectorAOption, " Sí "))).click();
             System.out.println("Se ha seleccionado la opción: si hay otro conductor.");
         }
         return this;
+
     }
 
     public PasosGenerales seleccionarSiSeguroAnterior(Boolean seguroAnterior) throws InterruptedException {
-        Thread.sleep(3000);
-        if(!seguroAnterior){
+
+        helper.waitSpinner();
+        if (!seguroAnterior) {
             driver.findElement(By.xpath(String.format(selectorAOption, " No "))).click();
             System.out.println("Se ha seleccionado la opción: no tengo seguro anterior.");
-        }else{
+        } else {
             driver.findElement(By.xpath(String.format(selectorAOption, " Sí "))).click();
             System.out.println("Se ha seleccionado la opción: si tengoseguro anteriorhay otro conductor.");
         }
         return this;
+
     }
 
     public PasosGenerales rellenarDatosContacto() throws InterruptedException {
-        Thread.sleep(3000);
-        String email= new Helper(driver).randomEmail();
-        String telefono= new Helper(driver).randomPhoneNumber();
 
+        helper.waitSpinner();
+        String email = new Helper(driver).randomEmail();
+        String telefono = new Helper(driver).randomPhoneNumber();
         driver.findElement(inputTextEmail).sendKeys(email);
         driver.findElement(inputTextPhone).sendKeys(telefono);
         driver.findElement(politicaPrivacidad).click();
         driver.findElement(buttonContinue).click();
         return this;
+
     }
 
     public PasosGenerales rellenarFechaInicio(LocalDate date) throws InterruptedException {
-        Thread.sleep(3000);
+
+        helper.waitSpinner();
         driver.findElement(calendarToday).click();
         return this;
+
+    }
+
+    public PasosGenerales comprobarPantallaPresupuesto() throws InterruptedException {
+
+        helper.waitSpinnerPrecio();
+        Thread.sleep(2000);
+        String[] numero = driver.findElement(numeroPresupuestoTxt).getText().trim().replaceAll("\\s{2,}", " ").split(" ");
+        System.out.println("El número de presupuesto es: " + numero[2]);
+        return this;
+
     }
 }

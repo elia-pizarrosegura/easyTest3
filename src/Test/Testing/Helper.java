@@ -11,6 +11,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.TreeMap;
+import java.util.concurrent.TransferQueue;
 
 public class Helper {
 
@@ -23,7 +25,7 @@ public class Helper {
         this.driver = driver;
     }
 
-    public void handleCookieComplianceDialog() {
+    public void handleCookieComplianceDialog() throws InterruptedException {
         if (!driver.findElement(cookieComplianceLayer).isDisplayed()) {
             return;
         }
@@ -31,6 +33,7 @@ public class Helper {
 
         if (display == null || !display.equals("none")) {
             driver.findElement(cookieComplianceAcceptButton).click();
+            Thread.sleep(2000);
         }
     }
 
@@ -39,12 +42,31 @@ public class Helper {
         while (i < 90) {
             if (isPresent(By.cssSelector(".backprocess"))) {
                 System.out.println("spinner present");
-                //if (driver.findElement(By.cssSelector(".backprocess")).isEnabled()) {
-
                 Thread.sleep(2000);
                 i++;
             } else {
+                Thread.sleep(2000);
                 System.out.println("spinner ya no presente");
+                Thread.sleep(2000);
+                break;
+            }
+        }
+        if (i == 90) {
+            Assert.fail("Error, el cuadro de espera ha estado presente durante mas de 90 segundos");
+        }
+    }
+
+    public void waitSpinnerPrecio() throws InterruptedException {
+        int i = 0;
+        while (i < 90) {
+            if (isPresent(By.cssSelector("div[class='pasatiempos-caja']"))) {
+                System.out.println("spinner present");
+                Thread.sleep(2000);
+                i++;
+            } else {
+                Thread.sleep(2000);
+                System.out.println("spinner ya no presente");
+                Thread.sleep(2000);
                 break;
             }
         }

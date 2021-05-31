@@ -33,6 +33,7 @@ public class SeleniumMain {
         WebDriver driver = new FirefoxDriver(options);
 
         String baseURL = "http://10.231.57.202/";
+        //String baseURL = "https://www.verti.es/";
         driver.get(baseURL);
 
         Steps steps = new Steps(driver);

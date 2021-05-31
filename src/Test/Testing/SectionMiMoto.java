@@ -24,19 +24,12 @@ public class SectionMiMoto {
 
     public SectionMiMoto introducirMatricula(Boolean matricula) throws InterruptedException {
 
-       // new Helper(driver).handleCookieComplianceDialog();
-        System.out.println(matricula);
-        //Thread.sleep(3000);
-        //helper.waitSpinner();
-
-
         if(!matricula) {
             driver.findElement(By.cssSelector("a[data-layer-click='{\"concoceMatricula\":\"N\"}']")).click();
             System.out.println("Se ha seleccionado la poción matricula desconocida");
         }else{
                 System.out.println("No se ha seleccionado ninguna opción de matrícula válida.");
         }
-        //new Helper(driver).waitSpinner();
         return this;
 
     }
@@ -46,8 +39,6 @@ public class SectionMiMoto {
         final By monthElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", bikeRegistrationMonth, date.getMonth().getValue()));
         helper.waitForPageToLoad(driver,monthElement);
         helper.waitSpinner();
-
-        //final By monthElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", bikeRegistrationMonth, date.getMonth().getValue()));
         driver.findElement(monthElement).click();
         final By yearElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", bikeRegistrationYear, date.getYear()));
         driver.findElement(yearElement).click();
@@ -56,18 +47,18 @@ public class SectionMiMoto {
     }
 
     public SectionMiMoto seleccionarMarca(String marca) throws InterruptedException {
+
         helper.waitForPageToLoad(driver,By.cssSelector(String.format(marcaBtn, marca)));
         helper.waitSpinner();
         driver.findElement(By.cssSelector(String.format(marcaBtn, marca))).click();
         System.out.println("Se ha seleccionado la marca:"+ marca);
         return this;
+
     }
 
     public SectionMiMoto seleccionarCilindarada(String cilindrada) throws InterruptedException{
 
-
         helper.waitSpinner();
-
         switch (cilindrada) {
             case "1-50":
                 By locator=By.xpath(String.format(cilindradaOption," Desde 1cc hasta 50cc "));
@@ -91,23 +82,28 @@ public class SectionMiMoto {
                 System.out.println("No se ha seleccionado ninguna cilindrada");
         }
         return this;
+
     }
 
     public SectionMiMoto seleccionarModelo(String modelo) throws InterruptedException{
+
         By locator=By.xpath(String.format(marcaOption, modelo));
         helper.waitSpinner();
         helper.waitForPageToLoad(driver,locator);
         driver.findElement(locator).click();
         System.out.println("Se ha seleccionado el modelo:"+  modelo);
         return this;
+
     }
 
     public SectionMiMoto seleccionarVersion(String version) throws InterruptedException{
+
         By locator=By.xpath(String.format(versionOption, version));
         helper.waitSpinner();
         helper.waitForPageToLoad(driver,locator);
         driver.findElement(locator).click();
         System.out.println("Se ha seleccionado el modelo:"+  version);
         return this;
+
     }
 }

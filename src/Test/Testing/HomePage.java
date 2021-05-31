@@ -12,8 +12,8 @@ public class HomePage {
         this.driver=driver;
     }
 
-    public void seleccionarProducto(String producto) {
-        System.out.println("Seleccion de producto");
+    public void seleccionarProducto(String producto) throws InterruptedException {
+        System.out.println("Seleccion de producto:"+ producto);
         new Helper(driver).handleCookieComplianceDialog();
         By selector = null;
         switch(producto) {
