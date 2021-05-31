@@ -14,7 +14,7 @@ public class Steps {
         this.driver = driver;
     }
 
-    public void stepSeleccionarProducto(String producto) {
+    public void stepSeleccionarProducto(String producto) throws InterruptedException {
         new HomePage(driver).seleccionarProducto(producto);
     }
 
@@ -54,9 +54,9 @@ public class Steps {
         pg.seleccionarSiConduceOtro(obj.isOtroConductor());
         pg.seleccionarSiSeguroAnterior(obj.isSeguroAnterior());
         pg.rellenarDatosContacto();
-        pg.rellenarFechaInicio(obj.getFechaInicio());/*
-        new SectionMiSeguro(driver).comprobarPantallaPresupuesto();
-*/
+        pg.rellenarFechaInicio(obj.getFechaInicio());
+        pg.comprobarPantallaPresupuesto();
+
     }
 
 
