@@ -1,7 +1,10 @@
 package Test.Testing;
 
+import Model.FicheroTxt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.io.IOException;
 
 public class HomePage {
 
@@ -12,8 +15,9 @@ public class HomePage {
         this.driver=driver;
     }
 
-    public void seleccionarProducto(String producto) throws InterruptedException {
+    public void seleccionarProducto(String producto) throws InterruptedException, IOException {
         System.out.println("Seleccion de producto:"+ producto);
+        new FicheroTxt().escrituraFichero("Seleccion de producto:"+ producto, new FicheroTxt().lecturaFichero());
         new Helper(driver).handleCookieComplianceDialog();
         By selector = null;
         switch(producto) {

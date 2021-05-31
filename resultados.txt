@@ -1,0 +1,22 @@
+Seleccion de producto:Moto
+Se ha seleccionado la poción matricula desconocida
+Fecha matriculación seleccionada:2021-01-01
+Se ha seleccionado la marca:APRILIA
+Se ha seleccionado el rango de cilindrada: 1-50
+Se ha seleccionado el modelo:SX
+Se ha seleccionado el modelo:APRILIA SX 50
+Se ha seleccionado la opción: no he comprado aún.
+Se ha seleccionado la opción: no he comprado aún.
+Se ha seleccionado la opción: duerme en garaje
+Se ha seleccionado la opción: uso solo fines.
+Se ha saltado la introducción de la identificación de usuario
+Se ha seleccionado la opción: casado.
+Se ha seleccionado la opción: administrativo.
+Fecha de nacimiento seleccionada:1984-01-01
+Se ha seleccionado la opción: hombre.
+Se ha seleccionado la opción: carnet tipo B
+Se ha seleccionado la opción: carnet Español.
+Fecha de nacimiento seleccionada:2015-01-01
+Se ha seleccionado la opción: no hay otro conductor.
+Se ha seleccionado la opción: no tengo seguro anterior.
+El número de presupuesto es: 1337989

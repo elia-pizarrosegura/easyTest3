@@ -2,23 +2,20 @@ package Test;
 
 import DataBase.DatabaseHandler;
 import Model.DataTestObject;
+import Model.FicheroTxt;
 import Test.Steps;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 
 public class SeleniumMain {
 
-  /*  public SeleniumMain() throws InterruptedException {
-       initFirefoxDriver();
-    }*/
-
-
-    public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException {
+    public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException, IOException {
         //public static void initFirefoxDriver(){
 
 
@@ -33,15 +30,14 @@ public class SeleniumMain {
         WebDriver driver = new FirefoxDriver(options);
 
         String baseURL = "http://10.231.57.202/";
-        //String baseURL = "https://www.verti.es/";
         driver.get(baseURL);
+        new FicheroTxt().borrarFichero();
 
         Steps steps = new Steps(driver);
 
         //Obtener datos para el test
         int ultimaInsercionDataTestObject= new DatabaseHandler().consultaIndiceDataTestObject();
-        DataTestObject objectData= new DataTestObject();
-        objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
+        DataTestObject objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
 
         //Iniciar test
         steps.stepSeleccionarProducto(objectData.getProducto());

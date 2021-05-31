@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import Test.Testing.SectionMiMoto;
 import Test.Testing.HomePage;
 
+import java.io.IOException;
+
 public class Steps {
     WebDriver driver;
 
@@ -14,11 +16,11 @@ public class Steps {
         this.driver = driver;
     }
 
-    public void stepSeleccionarProducto(String producto) throws InterruptedException {
+    public void stepSeleccionarProducto(String producto) throws InterruptedException, IOException {
         new HomePage(driver).seleccionarProducto(producto);
     }
 
-    public void seleccionarCamino(DataTestObject obj) throws InterruptedException {
+    public void seleccionarCamino(DataTestObject obj) throws InterruptedException, IOException {
         SectionMiMoto sm = new SectionMiMoto(driver);
         switch (obj.getProducto()) {
             case ("Moto"):
@@ -35,7 +37,7 @@ public class Steps {
 
     }
 
-    public void seleccionarPasosGenerales(DataTestObject obj) throws InterruptedException {
+    public void seleccionarPasosGenerales(DataTestObject obj) throws InterruptedException, IOException {
 
         PasosGenerales pg= new PasosGenerales(driver);
         pg. seleccionarMomentoCompra(obj.getMomentoCompra());
