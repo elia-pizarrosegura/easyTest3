@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 
 import DataBase.DatabaseHandler;
 import Model.DataTestObject;
+import Test.SeleniumMain;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -362,6 +363,8 @@ public class General {
     }
 
     public void changeScene(){
+
+
 
         idContinuar.getScene().getWindow().hide();
         Stage mainWindows= new Stage();

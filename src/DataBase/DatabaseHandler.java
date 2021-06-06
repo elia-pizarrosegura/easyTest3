@@ -41,6 +41,14 @@ public class DatabaseHandler extends Config {
         return logIn;
     }
 
+    public void insertSignIn( String user, String pass) throws SQLException, ClassNotFoundException {
+
+        String query = String.format("INSERT INTO easyTest.LogIn(userName,password) VALUES('%s','%s');", user, pass);
+        PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+        preparedStatement.executeUpdate();
+        System.out.println("Se ha realizado la inserción en la base de datos del usuario: "+user);
+    }
+
     public int consultaIndiceDataTestObject() throws SQLException, ClassNotFoundException {
         String query = "SELECT MAX(id_producto) FROM easyTest.DataTestObject;";
         PreparedStatement preparedStatement1 = getDbConnection().prepareStatement(query);

@@ -15,8 +15,9 @@ import java.sql.SQLException;
 
 public class SeleniumMain {
 
-    public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException, IOException {
-        //public static void initFirefoxDriver(){
+
+     public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException, IOException {
+   // public static void initFirefoxDriver() throws SQLException, ClassNotFoundException, IOException, InterruptedException {
 
 
         System.setProperty("webdriver.gecko.driver", "/Users/pizarroelia/Documents/Drivers/geckodriver");
@@ -36,8 +37,8 @@ public class SeleniumMain {
         Steps steps = new Steps(driver);
 
         //Obtener datos para el test
-        int ultimaInsercionDataTestObject= new DatabaseHandler().consultaIndiceDataTestObject();
-        DataTestObject objectData= new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
+        int ultimaInsercionDataTestObject = new DatabaseHandler().consultaIndiceDataTestObject();
+        DataTestObject objectData = new DatabaseHandler().obtenerDatosTestObject(ultimaInsercionDataTestObject);
 
         //Iniciar test
         steps.stepSeleccionarProducto(objectData.getProducto());
@@ -46,7 +47,9 @@ public class SeleniumMain {
 
 
     }
-
-
 }
+
+
+
+
 

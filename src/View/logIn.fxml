@@ -16,7 +16,7 @@
    <children>
       <AnchorPane prefHeight="569.0" prefWidth="877.0" style="-fx-background-color: #1a237e;">
          <children>
-            <Pane layoutX="351.0" layoutY="151.0" prefHeight="246.0" prefWidth="193.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+            <Pane layoutX="156.0" layoutY="148.0" prefHeight="246.0" prefWidth="193.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
                <children>
                   <Label alignment="CENTER" layoutX="69.0" layoutY="14.0" prefHeight="25.0" prefWidth="55.0" text="Login" textFill="#f6f8f6">
                      <font>
@@ -33,7 +33,31 @@
                         <DropShadow />
                      </effect>
                   </PasswordField>
-                  <Button fx:id="idLogIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="Test.Log In!" textAlignment="CENTER" textFill="#f8f8f8">
+                  <Button fx:id="idLogIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="Log In!" textAlignment="CENTER" textFill="#f8f8f8">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="447.0" layoutY="141.0" prefHeight="246.0" prefWidth="193.0" style="-fx-background-color: #283593; -fx-background-radius: 30;">
+               <children>
+                  <Label alignment="CENTER" layoutX="41.0" layoutY="20.0" prefHeight="25.0" prefWidth="111.0" text="Are you new?" textFill="#f6f8f6">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idUserSignIn" alignment="CENTER" layoutX="24.0" layoutY="76.0" prefHeight="25.0" prefWidth="146.0" promptText="User" style="-fx-background-radius: 40; -fx-background-color: #3f51b5 #3f51b5;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="idPassSignIn" alignment="CENTER" layoutX="24.0" layoutY="123.0" prefHeight="25.0" prefWidth="146.0" promptText="Pass" style="-fx-background-color: #3f51b5; -fx-background-radius: 40;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </PasswordField>
+                  <Button fx:id="idLogInSignIn" alignment="CENTER" layoutX="69.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3949ab; -fx-background-radius: 40;" text="Sign in!" textAlignment="CENTER" textFill="#f8f8f8">
                      <effect>
                         <DropShadow />
                      </effect>
