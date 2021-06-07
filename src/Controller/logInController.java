@@ -77,36 +77,62 @@ public class logInController {
 
         DatabaseHandler databaseHandler = new DatabaseHandler();
         LogInClass userDDBB = databaseHandler.getLogInData(idUser.getText());
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        System.out.println("introducido"+idUser.getText());
+        System.out.println("consulta:"+ userDDBB.getUser());
 
-        if (!idUser.getText().trim().equals(userDDBB.getUser().trim()) && !idPass.getText().trim().equals(userDDBB.getPass().trim())) {
-            if (idUser.getText().isEmpty() || idPass.getText().isEmpty()) {
-                System.out.println("User or pass is not filled.");
-            } else {
-                System.out.println("User or pass is incorrect");
+        if(idUser.getText().isEmpty()|| idPass.getText().isEmpty()) {
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("El usuario o la pass no se ha rellenado. Por favor, introducelo de nuevo.");
+            alert.showAndWait();
+            System.out.println("El usuario o la pass no se ha rellenado. Por favor, introducelo de nuevo.");
+        }else if(userDDBB.getUser()==null){
+                alert.setHeaderText(null);
+                alert.setTitle("Error");
+                alert.setContentText("El usuario no está registrado en la bbdd o es incorrecto.");
+                alert.showAndWait();
+                System.out.println("El usuario no está registrado en la bbdd o es incorrecto.");
+        }else if (!idPass.getText().trim().equals(userDDBB.getPass().trim())) {
+                    alert.setHeaderText(null);
+                    alert.setTitle("Error");
+                    alert.setContentText("La contraseña es incorrecto");
+                    alert.showAndWait();
+                    System.out.println("La contraseña es incorrecto");
+        }else {
+                accessGranted();
+
             }
-        } else {
-            accessGranted();
-
         }
 
-    }
+
 
 
     private void signIn() throws SQLException, ClassNotFoundException, IOException {
         DatabaseHandler databaseHandler2 = new DatabaseHandler();
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         //Identify if usser is already in DDBB
         LogInClass userDDBB = databaseHandler2.getLogInData(idUserSignIn.getText());
-        if(!userDDBB.getUser().isEmpty()){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+        if (userDDBB.getUser() == null) {
+            //el usuario que se ha introducido no está en la bbdd
+            System.out.println("prueba" + userDDBB.getUser());
+            userDDBB.setUser("");
+        }
+        if (idUserSignIn.getText().isEmpty() || idPassSignIn.getText().isEmpty()) {
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("Se ha dejado la contraseña o el usuario  en blanco");
+            alert.showAndWait();
+        } else if (userDDBB.getUser().equalsIgnoreCase(idUserSignIn.getText())) {
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("El usuario ya está registrado en la base de datos");
             alert.showAndWait();
-        }
-        if (!idUserSignIn.getText().isEmpty() && !idPassSignIn.getText().isEmpty()) {
-            databaseHandler2.insertSignIn(idUserSignIn.getText(), idPassSignIn.getText());
+        } else {
+            databaseHandler2.insertSignInn(idUserSignIn.getText(), idPassSignIn.getText());
             accessGranted();
         }
+
     }
 
     private void accessGranted() throws IOException {

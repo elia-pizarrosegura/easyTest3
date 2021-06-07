@@ -41,7 +41,7 @@ public class DatabaseHandler extends Config {
         return logIn;
     }
 
-    public void insertSignIn( String user, String pass) throws SQLException, ClassNotFoundException {
+    public void insertSignInn( String user, String pass) throws SQLException, ClassNotFoundException {
 
         String query = String.format("INSERT INTO easyTest.LogIn(userName,password) VALUES('%s','%s');", user, pass);
         PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
