@@ -115,7 +115,7 @@ public class logInController {
         idLogIn.getScene().getWindow().hide();
         //Define the new window
         Stage mainWindows = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("../View/main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../View/firstStage.fxml"));
         mainWindows.setTitle("easyTest");
         mainWindows.setScene(new Scene(root, 877, 569));
 

@@ -19,7 +19,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class General {
+public class SecondController {
 
     DataTestObject dt1= new DataTestObject();
     final ToggleGroup compraMotoGroup= new ToggleGroup();
@@ -364,19 +364,12 @@ public class General {
 
     public void changeScene(){
 
-
-
         idContinuar.getScene().getWindow().hide();
-        Stage mainWindows= new Stage();
-        Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../View/final.fxml"));
-        } catch (IOException e) {
+            new SeleniumMain();
+        } catch (InterruptedException | ClassNotFoundException | SQLException | IOException e) {
             e.printStackTrace();
         }
-        mainWindows.setTitle("easyTest");
-        mainWindows.setScene(new Scene(root, 877, 569));
-        mainWindows.show();
 
     }
 

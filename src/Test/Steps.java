@@ -1,7 +1,7 @@
 package Test;
 
 import Model.DataTestObject;
-import Test.Testing.PasosGenerales;
+import Test.Testing.PasosGeneralesPage;
 import org.openqa.selenium.WebDriver;
 import Test.Testing.SectionMiMoto;
 import Test.Testing.HomePage;
@@ -39,7 +39,7 @@ public class Steps {
 
     public void seleccionarPasosGenerales(DataTestObject obj) throws InterruptedException, IOException {
 
-        PasosGenerales pg= new PasosGenerales(driver);
+        PasosGeneralesPage pg= new PasosGeneralesPage(driver);
         pg. seleccionarMomentoCompra(obj.getMomentoCompra());
         pg.seleccionarKmAlAnyo(obj.getLeHago());
         pg.seleccionarDondeDuerme(obj.getDuerme());

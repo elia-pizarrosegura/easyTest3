@@ -57,3 +57,9 @@ C
 src/Test/Steps.java,f/b/fb6289368b7e206ea501263fae2fb9d108a6e040
 S
 #src/Test/Testing/SectionMiMoto.java,a/6/a6cd47e7b491bd986b766072c0f0f6211a3c16e3
+>
+resultados.txt,5/7/57bec7d8d64c086beb156145de139ea42fe80871
+N
+src/Test/ProjectConstants.java,5/c/5c1a93944a8b65e84eb4d71c3f9439c09d698988
+I
+src/Model/FicheroTxt.java,d/9/d93b262ea520c3edbc8db9ec8b232fe664163c0d

@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class PasosGenerales {
+public class PasosGeneralesPage {
 
     WebDriver driver;
     Helper helper = new Helper(driver);
@@ -27,11 +27,11 @@ public class PasosGenerales {
     private final By calendarToday = By.cssSelector(".ui-datepicker-today");
     private final By numeroPresupuestoTxt = By.cssSelector(".tu-presupuesto-valido");
 
-    public PasosGenerales(WebDriver driver) {
+    public PasosGeneralesPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public PasosGenerales seleccionarMomentoCompra(String momentoCompra) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarMomentoCompra(String momentoCompra) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (momentoCompra) {
@@ -53,7 +53,7 @@ public class PasosGenerales {
         return this;
     }
 
-    public PasosGenerales seleccionarKmAlAnyo(String leHago) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarKmAlAnyo(String leHago) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (leHago) {
@@ -75,7 +75,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarDondeDuerme(String duerme) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarDondeDuerme(String duerme) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (duerme) {
@@ -97,7 +97,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarCP(String cp) throws InterruptedException {
+    public PasosGeneralesPage seleccionarCP(String cp) throws InterruptedException {
 
         helper.waitSpinner();
         driver.findElement(codigoPostalInput).sendKeys(cp);
@@ -105,7 +105,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarUsoHabitual(String uso) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarUsoHabitual(String uso) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (uso) {
@@ -127,7 +127,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarIdentificacion() throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarIdentificacion() throws InterruptedException, IOException {
 
         helper.waitSpinner();
         driver.findElement(saltarPreguntaDni).click();
@@ -137,7 +137,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales rellenarSituacionPersonal(String situacionPersonal) throws InterruptedException, IOException {
+    public PasosGeneralesPage rellenarSituacionPersonal(String situacionPersonal) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (situacionPersonal) {
@@ -159,7 +159,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales rellenarSituacionProfesional(String situacionProfesional) throws InterruptedException, IOException {
+    public PasosGeneralesPage rellenarSituacionProfesional(String situacionProfesional) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (situacionProfesional) {
@@ -198,7 +198,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales rellenarSexo(String sexo) throws InterruptedException, IOException {
+    public PasosGeneralesPage rellenarSexo(String sexo) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         System.out.println("sex0:" + sexo);
@@ -221,7 +221,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarTipoCarne(String tipoCarne) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarTipoCarne(String tipoCarne) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         switch (tipoCarne) {
@@ -243,7 +243,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarPaisProcedencia() throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarPaisProcedencia() throws InterruptedException, IOException {
 
         helper.waitSpinner();
         driver.findElement(By.xpath(String.format(selectorAOption, " ESPAÑA "))).click();
@@ -253,7 +253,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarAnyoCarneConducir(LocalDate date) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarAnyoCarneConducir(LocalDate date) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         final By yearElement = By.cssSelector(String.format("%s span.mtzvalue[data-value=\"%s\"]", carneConducir, date.getYear()));
@@ -264,7 +264,7 @@ public class PasosGenerales {
     }
 
 
-    public PasosGenerales seleccionarSiConduceOtro(Boolean otroConductor) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarSiConduceOtro(Boolean otroConductor) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         if (!otroConductor) {
@@ -280,7 +280,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales seleccionarSiSeguroAnterior(Boolean seguroAnterior) throws InterruptedException, IOException {
+    public PasosGeneralesPage seleccionarSiSeguroAnterior(Boolean seguroAnterior) throws InterruptedException, IOException {
 
         helper.waitSpinner();
         if (!seguroAnterior) {
@@ -296,7 +296,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales rellenarDatosContacto() throws InterruptedException {
+    public PasosGeneralesPage rellenarDatosContacto() throws InterruptedException {
 
         helper.waitSpinner();
         String email = new Helper(driver).randomEmail();
@@ -309,7 +309,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales rellenarFechaInicio(LocalDate date) throws InterruptedException {
+    public PasosGeneralesPage rellenarFechaInicio(LocalDate date) throws InterruptedException {
 
         helper.waitSpinner();
         driver.findElement(calendarToday).click();
@@ -317,7 +317,7 @@ public class PasosGenerales {
 
     }
 
-    public PasosGenerales comprobarPantallaPresupuesto() throws InterruptedException, IOException {
+    public PasosGeneralesPage comprobarPantallaPresupuesto() throws InterruptedException, IOException {
 
         helper.waitSpinnerPrecio();
         Thread.sleep(2000);

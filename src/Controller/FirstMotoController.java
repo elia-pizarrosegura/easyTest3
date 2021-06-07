@@ -18,11 +18,10 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class MotoUnknownPlate {
+public class FirstMotoController {
 
     DataTestObject dt1 = new DataTestObject();
 
@@ -236,7 +235,7 @@ public class MotoUnknownPlate {
         Stage mainWindows= new Stage();
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("../View/general.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../View/secondController.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

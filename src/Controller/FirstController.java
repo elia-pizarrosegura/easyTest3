@@ -19,7 +19,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class MainController  {
+public class FirstController {
 
     int selectedProduct;
     String producto;
@@ -28,7 +28,7 @@ public class MainController  {
    // private ObservableList<DataTestObject> dt2= FXCollections.observableArrayList();
     private DataTestObject dt1= new DataTestObject();
 
-    public MainController(){
+    public FirstController(){
 
         //dt1.add(new DataTestObject());
     }
@@ -111,7 +111,7 @@ public class MainController  {
         }
         else if(selectedProduct==0) {
             System.out.println("camino moto");
-            path="../View/motoUnknownPlate.fxml";
+            path="../View/FirstMotoView.fxml";
         }
         else if(selectedProduct==1) {
             System.out.println("camino coche");
