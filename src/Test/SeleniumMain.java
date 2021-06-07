@@ -15,9 +15,6 @@ import java.sql.SQLException;
 
 public class SeleniumMain {
 
-
-   //  public static void main(String[] args) throws InterruptedException, SQLException, ClassNotFoundException, IOException {
-   // public static void initFirefoxDriver() throws SQLException, ClassNotFoundException, IOException, InterruptedException {
    public SeleniumMain() throws ClassNotFoundException, SQLException, InterruptedException, IOException {
       initFirefoxDriver();
    }

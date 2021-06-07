@@ -1,0 +1,61 @@
+
+S	java:S106R"9Replace this use of System.out or System.err by a logger.(ª—´‘ûÿÿÿÿ
+b
+java:S1192u"LDefine a constant instead of duplicating this literal "el producto" 5 times.(ÜœãÉ
+Q	java:S125d"<This block of commented-out lines of code should be removed.(ãÃ÷¨
+f
+java:S1192B"KDefine a constant instead of duplicating this literal "Cilindrada" 4 times.(†¬——ûÿÿÿÿ
+
+java:S1130¯"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ó„üÜ
+J
+java:S3740@"/Provide the parametrized type for this generic.(Ý¡¼Œüÿÿÿÿ
+b
+java:S1192D"GDefine a constant instead of duplicating this literal "Modelo" 4 times.(“†¾µüÿÿÿÿ
+J
+java:S3740@"/Provide the parametrized type for this generic.(Ý¡¼Œüÿÿÿÿ
+O	java:S106Å"9Replace this use of System.out or System.err by a logger.(ÍÐÌ
+O	java:S106Í"9Replace this use of System.out or System.err by a logger.(§íá
+E
+java:S3740F"/Provide the parametrized type for this generic.(Ãô„Ä
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+
+java:S1130¡"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(éë®„
+O	java:S106Ú"9Replace this use of System.out or System.err by a logger.(ºæ«Ú
+O	java:S106Ì"9Replace this use of System.out or System.err by a logger.(¤¬”­
+V	java:S125Y"<This block of commented-out lines of code should be removed.(Óïßûÿÿÿÿ
+N	java:S106^"9Replace this use of System.out or System.err by a logger.(åò¹•
+…
+java:S1130¡"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(éë®„
+S	java:S106~"9Replace this use of System.out or System.err by a logger.(ˆí‡ýøÿÿÿÿ
+S	java:S106w"9Replace this use of System.out or System.err by a logger.( •ÊÍüÿÿÿÿ
+S	java:S106}"9Replace this use of System.out or System.err by a logger.(˜¸ðèûÿÿÿÿ
+J
+java:S3740D"/Provide the parametrized type for this generic.(“†¾µüÿÿÿÿ
+Q	java:S125k"<This block of commented-out lines of code should be removed.( €½Ò
+S	java:S106r"9Replace this use of System.out or System.err by a logger.(‚åöÈþÿÿÿÿ
+J
+java:S3740B"/Provide the parametrized type for this generic.(†¬——ûÿÿÿÿ
+…
+java:S1130¨"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(òÄ˜ª
+
+java:S1130¨"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(òÄ˜ª
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(™ƒÞ«
+J
+java:S3740B"/Provide the parametrized type for this generic.(†¬——ûÿÿÿÿ
+a
+java:S1192@"FDefine a constant instead of duplicating this literal "Marca" 4 times.(Ý¡¼Œüÿÿÿÿ
+N	java:S106u"9Replace this use of System.out or System.err by a logger.(ÜœãÉ
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(˜¸ðèûÿÿÿÿ
+T	java:S106Ô"9Replace this use of System.out or System.err by a logger.(Õ”ôçýÿÿÿÿ
+N	java:S106y"9Replace this use of System.out or System.err by a logger.(©Ëß
+J
+java:S3740D"/Provide the parametrized type for this generic.(“†¾µüÿÿÿÿ
+…
+java:S1130¯"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ó„üÜ
+E
+java:S3740F"/Provide the parametrized type for this generic.(Ãô„Ä
+E
+java:S3740H"/Provide the parametrized type for this generic.(‡ÔëÉ
+N	java:S106‘"9Replace this use of System.out or System.err by a logger.(ŸØ¿O
+E
+java:S3740H"/Provide the parametrized type for this generic.(‡ÔëÉ

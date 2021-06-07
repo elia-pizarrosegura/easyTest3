@@ -3,16 +3,11 @@ package Test.Testing;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.TreeMap;
-import java.util.concurrent.TransferQueue;
 
 public class Helper {
 
@@ -104,44 +99,5 @@ public class Helper {
         String phone = String.valueOf(number);
         System.out.println("Produced random Mobile phone: " + phone);
         return phone;
-    }
-
-    public List<String> listarPasosPorProductos(String producto) {
-        List<String> listaPasos = new ArrayList<>();
-        switch (producto) {
-            case ("Moto"):
-                listaPasos.add("seleccionarFechaMatriculacion");
-                listaPasos.add("seleccionarMarca");
-                listaPasos.add("seleccionarCilindrada");
-                listaPasos.add("seleccionarModelo");
-                listaPasos.add("seleccionarVersion");
-                break;
-            default:
-                System.out.println("No se ha seleccionado producto adecuado para obtener lista de pasos");
-        }
-        //Lista pasos comunes.
-        listaPasos.add("momentoCompra");
-        listaPasos.add("alAnyoHago");
-        listaPasos.add("duerme");
-        listaPasos.add("duerme");
-        listaPasos.add("insertarCP");
-        listaPasos.add("usoHabitual");
-        listaPasos.add("seleccionarIdentificacionPersonal");
-        listaPasos.add("seleccionarSituacionPersonal");
-        listaPasos.add("seleccionarSituacionProfesional");
-        listaPasos.add("seleccionarFechaNacimiento");
-        listaPasos.add("seleccionarSexo");
-        listaPasos.add("seleccionarTipoCarne");
-        listaPasos.add("seleccionarPaisProcedencia");
-        listaPasos.add("seleccionarAnyoObtencionCarne");
-        listaPasos.add("seleccionarSiMotoConduceOtro");
-        listaPasos.add("seleccionarSiTengoSeguroAnterior");
-        listaPasos.add("rellenarEmailTelefono");
-        listaPasos.add("rellenarEmailTelefono");
-        listaPasos.add("seleccionarFechaInicio");
-        listaPasos.add("comprobarPantallaPresupuesto");
-
-        return listaPasos;
-
     }
 }

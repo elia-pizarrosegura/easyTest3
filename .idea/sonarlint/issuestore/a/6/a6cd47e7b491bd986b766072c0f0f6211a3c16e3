@@ -1,25 +1,30 @@
 
-U	java:S106"9Replace this use of System.out or System.err by a logger.(Œ±Íß8ý¯›®™/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(·å·Ðýÿÿÿÿ8ÓÏƒ­™/
-X	java:S125"<This block of commented-out lines of code should be removed.(Æ îþ8Ê…€­™/
-U	java:S106@"9Replace this use of System.out or System.err by a logger.(ãº†Š8å‹„®™/
->
-java:S1170"!Make this final field static too.(äæ²Ž8å¯ã­™/
-X	java:S125#"<This block of commented-out lines of code should be removed.(Àù¯ô8ÝÛ®­™/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
-Z	java:S106!"9Replace this use of System.out or System.err by a logger.(Á¹·Ãùÿÿÿÿ8Ð¸ãß˜/
-U	java:S106Z"9Replace this use of System.out or System.err by a logger.(Æ÷äþ8ŒŽž®™/
 C
-java:S1170"!Make this final field static too.(Å»Þùÿÿÿÿ8ùî¶­™/
-U	java:S106/"9Replace this use of System.out or System.err by a logger.(ªëµ8ô‹ß­™/
-‰
-java:S1192@"lDefine a constant instead of duplicating this literal "Se ha seleccionado el rango de cilindrada: " 3 times.(ãº†Š8å‹„®™/
+java:S1170"!Make this final field static too.(Ñû„‘ÿÿÿÿÿ8ùî¶­™/
+U	java:S106 "9Replace this use of System.out or System.err by a logger.(Œ±Íß8ý¯›®™/
+U	java:S1062"9Replace this use of System.out or System.err by a logger.(ªëµ8ô‹ß­™/
+C
+java:S1170"!Make this final field static too.(Å»Þùÿÿÿÿ8ùî¶­™/
+€
+java:S1192j"^Define a constant instead of duplicating this literal "Se ha seleccionado el modelo:" 4 times.(‹ÐÞòþÿÿÿÿ8èØÝÇœ/
+U	java:S106K"9Replace this use of System.out or System.err by a logger.(ãº†Š8«‚®™/
 G
-java:S5411"*Use the primitive boolean expression here.(¶±ù8ËËà˜/
-Z	java:S1066"9Replace this use of System.out or System.err by a logger.(žÁ »ùÿÿÿÿ8£‹é­™/
-Z	java:S106S"9Replace this use of System.out or System.err by a logger.(‹ÐÞòþÿÿÿÿ8Á†Œ®™/
-U	java:S106D"9Replace this use of System.out or System.err by a logger.(ãº†Š8å‹„®™/
-C
-java:S1170"!Make this final field static too.(Ñû„‘ÿÿÿÿÿ8ùî¶­™/
-U	java:S106H"9Replace this use of System.out or System.err by a logger.(ãº†Š8€§„®™/
-Z	java:S106K"9Replace this use of System.out or System.err by a logger.(§óªÆøÿÿÿÿ8«‚®™/
+java:S5411"*Use the primitive boolean expression here.(¶±ù8ËËà˜/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
+f
+java:S1128"IRemove this unused import 'org.openqa.selenium.support.ui.WebDriverWait'.(¥÷ó8èØÝÇœ/
+Z	java:S106]"9Replace this use of System.out or System.err by a logger.(§óªÆøÿÿÿÿ8èØÝÇœ/
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(‹ÐÞòþÿÿÿÿ8Á†Œ®™/
+>
+java:S1170"!Make this final field static too.(äæ²Ž8å¯ã­™/
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(Á¹·Ãùÿÿÿÿ8Ð¸ãß˜/
+U	java:S106v"9Replace this use of System.out or System.err by a logger.(Æ÷äþ8ŒŽž®™/
+p
+java:S1128"NRemove this unused import 'org.openqa.selenium.support.ui.ExpectedConditions'.(û€Èéúÿÿÿÿ8èØÝÇœ/
+Z	java:S106="9Replace this use of System.out or System.err by a logger.(žÁ »ùÿÿÿÿ8£‹é­™/
+™
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(¥²Ã÷ÿÿÿÿÿ8èØÝÇœ/
+U	java:S106R"9Replace this use of System.out or System.err by a logger.(ãº†Š8å‹„®™/
+U	java:S106Y"9Replace this use of System.out or System.err by a logger.(ãº†Š8å‹„®™/
+‰
+java:S1192K"lDefine a constant instead of duplicating this literal "Se ha seleccionado el rango de cilindrada: " 6 times.(ãº†Š8å‹„®™/

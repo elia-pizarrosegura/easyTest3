@@ -22,21 +22,12 @@ import javafx.stage.Stage;
 public class FirstController {
 
     int selectedProduct;
-    String producto;
     int selectedPlateOption=-1;
     String path;
-   // private ObservableList<DataTestObject> dt2= FXCollections.observableArrayList();
     private DataTestObject dt1= new DataTestObject();
 
     public FirstController(){
-
-        //dt1.add(new DataTestObject());
     }
-
-
-    //public ObservableList<DataTestObject> getDataTestObject(){
-        //return dt1;
-    //}
 
     @FXML
     private ResourceBundle resources;
@@ -133,7 +124,6 @@ public class FirstController {
         mainWindows.setScene(new Scene(root, 877, 569));
         mainWindows.show();
 
-        //new MotoUnknownPlate().transferMainObject(this);
 
     }
 

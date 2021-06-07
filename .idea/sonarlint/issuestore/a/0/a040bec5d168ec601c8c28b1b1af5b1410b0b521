@@ -1,0 +1,56 @@
+
+[	java:S106Õ"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604Ò"(Make this anonymous inner class a lambda(µü—•ÿÿÿÿÿ8•È±¨˜/
+Q
+java:S1128"/Remove this unused import 'javafx.stage.Stage'.(æÄ¸²úÿÿÿÿ8…ç¹»/
+O
+java:S2440ñ",Remove this instantiation of "SeleniumMain".(€Ä·ãûÿÿÿÿ8Õ¶¶»/
+~
+java:S1192”"[Define a constant instead of duplicating this literal "Ha cambiado la seleccion:" 10 times.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+i
+java:S2142ò"FEither re-interrupt this method or rethrow the "InterruptedException".(ê ˜üÿÿÿÿ8Õ¶¶»/
+[	java:S106ü"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+V	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(íÔ€Ç8­õ±¨˜/
+V	java:S106§"9Replace this use of System.out or System.err by a logger.(ÌŸ¬ö8•È±¨˜/
+[	java:S106¡"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+F
+java:S1604"(Make this anonymous inner class a lambda(¢ĞÁØ8•È±¨˜/
+[	java:S106ï"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+w
+java:S1192™"YDefine a constant instead of duplicating this literal "La fecha por defecto es:" 3 times.(×ì¤”8•È±¨˜/
+V	java:S106™"9Replace this use of System.out or System.err by a logger.(×ì¤”8•È±¨˜/
+V	java:S106 "9Replace this use of System.out or System.err by a logger.(ñŒúÏ8•È±¨˜/
+U	java:S106}"9Replace this use of System.out or System.err by a logger.(Â¿³¨8˜ª¯¨˜/
+L
+java:S1128"/Remove this unused import 'javafx.scene.Scene'.(Õü²8…ç¹»/
+M
+java:S1128"0Remove this unused import 'javafx.scene.Parent'.(²ä¡È8…ç¹»/
+[	java:S106®"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+F
+java:S1604¸"(Make this anonymous inner class a lambda(ŒÛæÍ8•È±¨˜/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º›°Î
+K
+java:S1604†"(Make this anonymous inner class a lambda(¯×åÁûÿÿÿÿ8•È±¨˜/
+[	java:S106‰"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+F
+java:S1604Å"(Make this anonymous inner class a lambda(­¾½8•È±¨˜/
+V	java:S106‰"9Replace this use of System.out or System.err by a logger.(­´êæ8­õ±¨˜/
+[	java:S106»"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604ì"(Make this anonymous inner class a lambda(¥˜åûúÿÿÿÿ8•È±¨˜/
+t
+java:S3776s"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(÷‹¾†ÿÿÿÿÿ8êò‰Š˜/
+[	java:S106â"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604ù"(Make this anonymous inner class a lambda(™¬ÍÄşÿÿÿÿ8•È±¨˜/
+[	java:S106È"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/
+K
+java:S1604«"(Make this anonymous inner class a lambda(õ²ğñûÿÿÿÿ8•È±¨˜/
+K
+java:S1604ß"(Make this anonymous inner class a lambda(¬«±ıÿÿÿÿ8•È±¨˜/
+U
+java:S1128"3Remove this unused import 'javafx.fxml.FXMLLoader'.(À‡ô³úÿÿÿÿ8…ç¹»/
+F
+java:S1604‘"(Make this anonymous inner class a lambda(Š­·©8•È±¨˜/
+[	java:S106”"9Replace this use of System.out or System.err by a logger.(Üï˜½ûÿÿÿÿ8•È±¨˜/

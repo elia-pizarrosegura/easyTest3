@@ -1,7 +1,26 @@
 
-S	java:S1069"9Replace this use of System.out or System.err by a logger.(ø…Œ¸úÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
 f
-java:S13010"KReplace this "switch" statement by "if" statements to increase readability.(Ú¾¤êøÿÿÿÿ
+java:S1301o"KReplace this "switch" statement by "if" statements to increase readability.(Ú¾¤êøÿÿÿÿ
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(ì„›µüÿÿÿÿ8²ÒïÞœ/
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(äƒê—ûÿÿÿÿ8²ÒïÞœ/
+Y
+java:S1854T"<Remove this useless assignment to local variable "var10001".(—û–‡8²ÒïÞœ/
+P
+java:S1128".Remove this unused import 'java.util.TreeMap'.(¨éˆèýÿÿÿÿ8²ÒïÞœ/
+j
+java:S1128"MRemove this unused import 'org.openqa.selenium.support.ui.ExpectedCondition'.(Ü¥ö’8²ÒïÞœ/
+Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ì„›µüÿÿÿÿ8²ÒïÞœ/
 F
-java:S5960*"+Remove this assertion from production code.(•ò­´úÿÿÿÿ
+java:S59607"+Remove this assertion from production code.(•ò­´úÿÿÿÿ
+\
+java:S1128"?Remove this unused import 'java.util.concurrent.TransferQueue'.(Äøô¦8²ÒïÞœ/
+U	java:S106b"9Replace this use of System.out or System.err by a logger.(ÌöŽ±8²ÒïÞœ/
+A
+java:S2676"Use the original value instead.(Ôùº ûÿÿÿÿ8²ÒïÞœ/
+U	java:S106]"9Replace this use of System.out or System.err by a logger.(Û¨·8²ÒïÞœ/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
+J
+java:S1481T"-Remove this unused "var10001" local variable.(—û–‡8²ÒïÞœ/
+Z	java:S106?"9Replace this use of System.out or System.err by a logger.(äƒê—ûÿÿÿÿ8²ÒïÞœ/
+U	java:S106i"9Replace this use of System.out or System.err by a logger.(ò¡ÙÂ8²ÒïÞœ/
+S	java:S106x"9Replace this use of System.out or System.err by a logger.(ø…Œ¸úÿÿÿÿ

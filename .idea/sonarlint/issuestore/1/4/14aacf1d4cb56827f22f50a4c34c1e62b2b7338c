@@ -1,0 +1,58 @@
+
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(¼ÁïÙ
+T	java:S106Ì"9Replace this use of System.out or System.err by a logger.(¢Ê‡×ûÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(İ‹«¢
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(²ŞÁ‰üÿÿÿÿ
+O	java:S106Õ"9Replace this use of System.out or System.err by a logger.(ã‹éæ
+T	java:S106ú"9Replace this use of System.out or System.err by a logger.(¬üÎñÿÿÿÿÿ
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(âÏ‰…ûÿÿÿÿ
+T	java:S106…"9Replace this use of System.out or System.err by a logger.(ÀÜƒùÿÿÿÿ
+N	java:S106r"9Replace this use of System.out or System.err by a logger.(–áŒ
+T	java:S106Ù"9Replace this use of System.out or System.err by a logger.(ÃË´‚úÿÿÿÿ
+O	java:S106¤"9Replace this use of System.out or System.err by a logger.(šşâÀ
+
+java:S1192("tDefine a constant instead of duplicating this literal "Se ha seleccionado la opciÃ³n: no he comprado aÃºn." 4 times.(ÅÃğ‹ÿÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¹®¨
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(úñöĞ
+T	java:S106ï"9Replace this use of System.out or System.err by a logger.(š³å¶ûÿÿÿÿ
+T	java:S106”"9Replace this use of System.out or System.err by a logger.(Ñ›Üüşÿÿÿÿ
+T	java:S106¨"9Replace this use of System.out or System.err by a logger.(åÅÜüÿÿÿÿ
+O	java:S106­"9Replace this use of System.out or System.err by a logger.(ùûùŞ
+{
+java:S1192»"dDefine a constant instead of duplicating this literal "%s span.mtzvalue[data-value=\"%s\"]" 4 times.(»Èƒø
+O	java:S106±"9Replace this use of System.out or System.err by a logger.(™¯Ö•
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(ÅÃğ‹ÿÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(úñöĞ
+O	java:S106Ğ"9Replace this use of System.out or System.err by a logger.(ÒĞ·
+T	java:S106Ä"9Replace this use of System.out or System.err by a logger.(ÀÜƒùÿÿÿÿ
+S	java:S106]"9Replace this use of System.out or System.err by a logger.(„˜­Òùÿÿÿÿ
+‹
+java:S1192-"uDefine a constant instead of duplicating this literal "Se ha seleccionado la opciÃ³n: hace menos de 3 meses" 4 times.(úñöĞ
+<
+java:S1170"!Make this final field static too.(éÃÏÿÿÿÿÿ
+G
+java:S1172¸"+Remove this unused method parameter "date".(ÿÕ¡ûÿÿÿÿ
+O	java:S106†"9Replace this use of System.out or System.err by a logger.(ĞÏ‡
+~
+java:S1192Ä"bDefine a constant instead of duplicating this literal "Fecha de nacimiento seleccionada:" 4 times.(ÀÜƒùÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(í§íïúÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(ÅÃğ‹ÿÿÿÿÿ
+T	java:S106›"9Replace this use of System.out or System.err by a logger.(Ï³¤ıÿÿÿÿ
+T	java:S106—"9Replace this use of System.out or System.err by a logger.(õø÷ìÿÿÿÿÿ
+A
+java:S5411"*Use the primitive boolean expression here.(ˆ·Ü
+N	java:S106w"9Replace this use of System.out or System.err by a logger.(Ãàœ÷
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(‡£êùıÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(ÃóŒ,
+T	java:S106æ"9Replace this use of System.out or System.err by a logger.(ÙÈˆùÿÿÿÿ
+T	java:S106’"9Replace this use of System.out or System.err by a logger.(ĞØ³Şøÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(Æ¨Şöùÿÿÿÿ
+T	java:S106ë"9Replace this use of System.out or System.err by a logger.(²”’³ıÿÿÿÿ
+F
+java:S5411"*Use the primitive boolean expression here.(›‰Üëúÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(ç¬…½ÿÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ó¢Âùıÿÿÿÿ
+N	java:S106Å"9Replace this use of System.out or System.err by a logger.(ıÄõf
